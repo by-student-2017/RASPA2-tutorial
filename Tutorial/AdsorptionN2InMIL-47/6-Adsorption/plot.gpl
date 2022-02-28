@@ -1,0 +1,21 @@
+#!/usr/bin/gnuplot
+
+set key left top
+
+#set logscale x
+#set xrange[1e-9:1e0]
+#set format x "10^{%L}"
+
+set terminal win font "Arial,12"
+set xlabel "Relative Pressure [P/P_0]"
+set mxtics 5
+
+set ylabel "Adsorpition [cm^3(STP)/gr framework]"
+set mytics 5
+
+plot "absolute_results.txt" u 1:2 w p pt 7 lc "red" t "absolute", "excess_results.txt" u 1:2 w p pt 6 lc "blue" t "excess"
+pause -1
+
+set terminal png truecolor enhanced
+set out "plot.png"
+replot
