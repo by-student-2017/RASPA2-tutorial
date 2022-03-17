@@ -1,6 +1,7 @@
 #!/usr/bin/gnuplot
 
-set key left top
+set key right bottom
+set key box linestyle 1
 
 #set logscale x
 #set xrange[1e-9:1e0]

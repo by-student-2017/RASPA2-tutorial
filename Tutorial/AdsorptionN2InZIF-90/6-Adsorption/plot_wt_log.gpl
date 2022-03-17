@@ -1,11 +1,10 @@
 #!/usr/bin/gnuplot
 
-set key right bottom
-set key box linestyle 1
+set key left top
 
-#set logscale x
-#set xrange[1e-9:1e0]
-#set format x "10^{%L}"
+set logscale x
+set xrange[1e-9:1e0]
+set format x "10^{%L}"
 
 set terminal win font "Arial,12"
 set xlabel "Relative pressure [P/P_0]"
