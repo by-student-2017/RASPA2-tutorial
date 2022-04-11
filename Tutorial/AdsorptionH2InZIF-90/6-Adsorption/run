@@ -5,12 +5,26 @@ export LD_LIBRARY_PATH=${RASPA_DIR}/lib
 $RASPA_DIR/bin/simulate $1
 
 cp read_data.sh ./Output/System_0/read_data.sh
-cp plot.gpl     ./Output/System_0/plot.gpl
-cp plot.gpl     ./Output/System_0/plot_log.gpl
+cp read_data_mg.sh  ./Output/System_0/read_data_mg.sh
+cp plot_stp.gpl     ./Output/System_0/plot_stp.gpl
+cp plot_stp_log.gpl ./Output/System_0/plot_stp_log.gpl
+cp plot_mmol.gpl     ./Output/System_0/plot_mmol.gpl
+cp plot_mmol_log.gpl ./Output/System_0/plot_mmol_log.gpl
+cp plot_wt.gpl     ./Output/System_0/plot_wt.gpl
+cp plot_wt_log.gpl ./Output/System_0/plot_wt_log.gpl
 cd ./Output/System_0
 ./read_data.sh
-./plot.gpl
-./plot_log.gpl
+./read_data_mg.sh
+./plot_stp.gpl
+./plot_stp_log.gpl
+./plot_mmol.gpl
+./plot_mmol_log.gpl
+./plot_wt.gpl
+./plot_wt_log.gpl
 cd ./../../
-cp ./Output/System_0/plot.png ./
-cp ./Output/System_0/plot_log.png ./
+cp ./Output/System_0/plot_stp.png ./
+cp ./Output/System_0/plot_stp_log.png ./
+cp ./Output/System_0/plot_mmol.png ./
+cp ./Output/System_0/plot_mmol_log.png ./
+cp ./Output/System_0/plot_wt.png ./
+cp ./Output/System_0/plot_wt_log.png ./

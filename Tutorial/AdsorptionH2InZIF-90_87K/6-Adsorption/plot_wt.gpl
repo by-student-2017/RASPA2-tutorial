@@ -11,12 +11,12 @@ set terminal win font "Arial,12"
 set xlabel "Relative pressure [P/P_0]"
 set mxtics 5
 
-set ylabel "Volume adsorbed [cm^3(STP)/gr framework]"
+set ylabel "Uptake [wt%]"
 set mytics 5
 
-plot "absolute_results.txt" u 1:2 w p pt 7 lc "red" t "absolute", "excess_results.txt" u 1:2 w p pt 6 lc "blue" t "excess"
+plot "absolute_results_mg.txt" u 1:($2/10) w p pt 7 lc "red" t "absolute", "excess_results_mg.txt" u 1:($2/10) w p pt 6 lc "blue" t "excess"
 pause -1
 
 set terminal png truecolor enhanced
-set out "plot_stp.png"
+set out "plot_mmol.png"
 replot
