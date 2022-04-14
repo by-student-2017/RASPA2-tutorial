@@ -1,0 +1,28 @@
+#!/usr/bin/gnuplot
+
+set title "MOF-177, H_2 gas"
+set label "init. charge from " at graph 0.01, graph 0.96
+#set key left top
+set key at graph  0.17, graph  0.93
+
+#set logscale x
+#set xrange[1e-9:1e0]
+#set format x "10^{%L}"
+
+set terminal win font "Arial,12"
+set xlabel "Relative pressure [P/P_0]"
+set mxtics 5
+
+set ylabel "Excess adsorption [cm^3(STP)/gr framework]"
+set mytics 5
+set ytics 50
+
+plot "excess_results_77K.txt" u 1:2 w p pt 7 lc "red" t "cif, 77 K", "excess_results_87K.txt" u 1:2 w p pt 5 lc "blue" t "cif, 87 K", \
+     "excess_results_PM7_77K.txt" u 1:2 w p pt 3 lc "red" t "PM7, 77K", "excess_results_PM7_87K.txt" u 1:2 w p pt 3 lc "blue" t "PM7, 87 K", \
+     "excess_results_init_charge0_77K.txt" u 1:2 w p pt 6 lc "red" t "0.0, 77 K", "excess_results_init_charge0_87K.txt" u 1:2 w p pt 4 lc "blue" t "0.0, 87 K"
+#pause -1
+
+set terminal png truecolor enhanced
+set out "plot_stp.png"
+set key at graph  0.3, graph  0.93
+replot
