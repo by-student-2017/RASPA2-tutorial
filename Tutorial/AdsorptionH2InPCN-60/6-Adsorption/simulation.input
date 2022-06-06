@@ -1,0 +1,25 @@
+SimulationType                MonteCarlo
+NumberOfCycles                10000
+NumberOfInitializationCycles  10000
+PrintEvery                    100
+RestartFile                   no
+
+Forcefield                    GenericMOFs
+UseChargesFromCIFFile         yes
+
+Framework 0
+FrameworkName PCN-60
+UnitCells 1 1 1
+HeliumVoidFraction 0.824564
+ExternalTemperature 77.0
+#ExternalPressure 0.95e5
+ExternalPressure 0.75e5 0.8e5 0.85e5 0.9e5 0.95e5
+
+Component 0 MoleculeName             H2
+            MoleculeDefinition       TraPPE
+            TranslationProbability   0.5
+            RotationProbability      0.5
+            ReinsertionProbability   0.5
+            SwapProbability          1.0
+            CreateNumberOfMolecules  0
+
