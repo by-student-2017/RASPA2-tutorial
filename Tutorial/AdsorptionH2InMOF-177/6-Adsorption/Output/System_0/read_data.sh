@@ -1,11 +1,13 @@
 #!/bin/bash
 
+P0=101325
+
 #grep "Average loading absolute" output*
 #grep "Average loading excess" output*
 #grep "cm^3 (STP)/gr framework" output*
 
-echo "P/P0, absolute[cm3 (STP)/gr framework]" > absolute_results.txt
-echo "P/P0, excess[cm3 (STP)/gr framework]" > excess_results.txt
+echo "P/P0, absolute[cm3 (STP)/gr framework], P[Pa]" > absolute_results.txt
+echo "P/P0, excess[cm3 (STP)/gr framework], P[Pa]" > excess_results.txt
 for f in *.data
 do
   #echo $f
@@ -13,6 +15,6 @@ do
   fbase=${f2%_*}
   Pa=${f2//"${fbase}_"/}
   #echo ${Pa}
-  awk -v pre=${Pa} '{if($3=="absolute" && $5=="(STP)/gr"){printf "%12.10f, %12.6f \n", (pre/101325), $7}}' $f >> absolute_results.txt
-  awk -v pre=${Pa} '{if($3=="excess" && $5=="(STP)/gr"){printf "%12.10f, %12.6f \n", (pre/101325), $7}}'   $f >> excess_results.txt
+  awk -v pre=${Pa} -v p0=${P0} '{if($3=="absolute" && $5=="(STP)/gr"){printf "%12.10f, %12.6f, %12.6f \n", (pre/p0), $7, pre, p0}}' $f >> absolute_results.txt
+  awk -v pre=${Pa} -v p0=${P0} '{if($3=="excess" && $5=="(STP)/gr"){printf "%12.10f, %12.6f, %12.6f \n", (pre/p0), $7, pre, p0}}'   $f >> excess_results.txt
 done

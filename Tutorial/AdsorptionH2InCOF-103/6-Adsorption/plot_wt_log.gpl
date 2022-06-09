@@ -17,5 +17,5 @@ plot "absolute_results_mg.txt" u 1:($2/10) w p pt 7 lc "red" t "absolute", "exce
 pause -1
 
 set terminal png truecolor enhanced
-set out "plot_mmol.png"
+set out "plot_wt_log.png"
 replot
