@@ -1,0 +1,25 @@
+SimulationType                MonteCarlo
+NumberOfCycles                10000
+NumberOfInitializationCycles  10000
+PrintEvery                    100
+RestartFile                   no
+
+Forcefield                    GenericMOFs
+UseChargesFromCIFFile         yes
+
+Framework 0
+FrameworkName JUC-597_hea_net_exp_charge
+UnitCells 1 1 1
+HeliumVoidFraction 0.915425
+ExternalTemperature 77.0
+#ExternalPressure 0.95e5
+ExternalPressure 1e-4 1e-3 1e-2 1e-1 1e0 1e1 1e2 1e3 1e4 0.15e5 0.2e5 0.25e5 0.3e5 0.35e5 0.4e5 0.45e5 0.5e5 0.55e5 0.6e5 0.65e5 0.7e5 0.75e5 0.8e5 0.85e5 0.9e5 0.95e5
+
+Component 0 MoleculeName             H2
+            MoleculeDefinition       TraPPE
+            TranslationProbability   0.5
+            RotationProbability      0.5
+            ReinsertionProbability   0.5
+            SwapProbability          1.0
+            CreateNumberOfMolecules  0
+
