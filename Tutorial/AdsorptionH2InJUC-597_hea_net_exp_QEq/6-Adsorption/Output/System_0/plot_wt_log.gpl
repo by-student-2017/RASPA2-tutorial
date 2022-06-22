@@ -1,0 +1,21 @@
+#!/usr/bin/gnuplot
+
+set key left top
+
+set logscale x
+set xrange[1e-9:1e0]
+set format x "10^{%L}"
+
+set terminal win font "Arial,12"
+set xlabel "Relative pressure [P/P_0]"
+set mxtics 5
+
+set ylabel "Uptake [wt%]"
+set mytics 5
+
+plot "absolute_results_mg.txt" u 1:($2/10) w p pt 7 lc "red" t "absolute", "excess_results_mg.txt" u 1:($2/10) w p pt 6 lc "blue" t "excess"
+pause -1
+
+set terminal png truecolor enhanced
+set out "plot_mmol.png"
+replot
