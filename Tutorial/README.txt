@@ -2,6 +2,7 @@ RASPA 2.0.37
 
 RASPA2 (Edit: 15/Nov/2021)
 (ubuntu 20.04 LTS, ubuntu 18.04 LTS or Debian 10.3 on windows10)
+check: Ubuntu 18.04 LTS on Windows 11 (WSL2)
 
 ## Installation
 1. cd ~
