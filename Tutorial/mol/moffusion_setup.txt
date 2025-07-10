@@ -1,0 +1,16 @@
+conda create -n moffusion python=3.9.18 -y
+conda activate moffusion
+
+conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
+conda install -y -c conda-forge cudatoolkit-dev
+conda install -c fvcore -c iopath -c conda-forge fvcore iopath
+conda install pytorch3d -c pytorch3d
+pip install h5py joblib termcolor scipy einops tqdm matplotlib opencv-python PyMCubes imageio trimesh omegaconf tensorboard notebook Pillow==9.5.0 py3Dmol ipywidgets transformers pormake seaborn scikit-learn
+
+mkdir saved_ckpt
+wget https://figshare.com/ndownloader/files/46925977 -O saved_ckpt/vqvae.pth
+wget https://figshare.com/ndownloader/files/46925971 -O saved_ckpt/mof_constructor_topo.pth
+wget https://figshare.com/ndownloader/files/46925974 -O saved_ckpt/mof_constructor_BB.pth
+wget https://figshare.com/ndownloader/files/46931689 -O saved_ckpt/moffusion_uncond.pth
+wget https://figshare.com/ndownloader/files/46926004 -O saved_ckpt/moffusion_topo.pth
+
