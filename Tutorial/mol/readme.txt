@@ -6,7 +6,7 @@ https://zenodo.org/records/15055758
 https://mof.tech.northwestern.edu/
 #-----------------------------------------------------------
 ToBaCCo（Topological Building Block Construction）
-MOF Constructor（構造生成）
+MOF Constructor
 https://github.com/parkjunkil/MOFFUSION
 https://github.com/Zhangshitong-hub/MOF-MembraneConstructor
 https://mofsimplify.mit.edu/
