@@ -1,12 +1,13 @@
-conda create -n moffusion python=3.9.18 -y
-conda activate moffusion
+#------------------------------------------------------------------------------
+# MOFFUSION Setup for WSL2 + Ubuntu 22.04.5 LTS + RTX 3070
+#------------------------------------------------------------------------------
 
-conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
-conda install -y -c conda-forge cudatoolkit-dev
-conda install -c fvcore -c iopath -c conda-forge fvcore iopath
-conda install pytorch3d -c pytorch3d
-pip install h5py joblib termcolor scipy einops tqdm matplotlib opencv-python PyMCubes imageio trimesh omegaconf tensorboard notebook Pillow==9.5.0 py3Dmol ipywidgets transformers pormake seaborn scikit-learn
+# 1. Download MOFFUSION source code
+wget https://github.com/parkjunkil/MOFFUSION/archive/refs/tags/v1.0.0.tar.gz
+tar xvf v1.0.0.tar.gz
+cd MOFFUSION-1.0.0
 
+# 2. Download pretrained model checkpoints
 mkdir saved_ckpt
 wget https://figshare.com/ndownloader/files/46925977 -O saved_ckpt/vqvae.pth
 wget https://figshare.com/ndownloader/files/46925971 -O saved_ckpt/mof_constructor_topo.pth
@@ -14,3 +15,19 @@ wget https://figshare.com/ndownloader/files/46925974 -O saved_ckpt/mof_construct
 wget https://figshare.com/ndownloader/files/46931689 -O saved_ckpt/moffusion_uncond.pth
 wget https://figshare.com/ndownloader/files/46926004 -O saved_ckpt/moffusion_topo.pth
 
+# 3. Create a new Conda environment
+conda create -n moffusion_clean python=3.9.18 -y
+conda activate moffusion_clean
+
+# 4. Install PyTorch with CUDA 11.8 support (official NVIDIA channel)
+conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# 5. Install MOFFUSION dependencies
+conda install -y -c conda-forge rdkit cudatoolkit-dev fvcore=0.1.5.post20221221 iopath
+conda install -y -c pytorch3d pytorch3d
+
+# 6. Install Python packages
+pip install --force-reinstall \
+  h5py joblib termcolor scipy einops tqdm matplotlib opencv-python \
+  PyMCubes imageio trimesh omegaconf tensorboard notebook Pillow==9.5.0 \
+  py3Dmol ipywidgets transformers pormake seaborn scikit-learn
