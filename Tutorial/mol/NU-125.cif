@@ -1,0 +1,187 @@
+#------------------------------------------------------------------------------
+#$Date: 2016-03-26 20:38:21 +0200 (Sat, 26 Mar 2016) $
+#$Revision: 180442 $
+#$URL: file:///home/coder/svn-repositories/cod/cif/7/21/11/7211159.cif $
+#------------------------------------------------------------------------------
+#
+# This file is available in the Crystallography Open Database (COD),
+# http://www.crystallography.net/
+#
+# All data on this site have been placed in the public domain by the
+# contributors.
+#
+data_7211159
+loop_
+_publ_author_name
+'Smalley, Adam P.'
+'Reid, David G.'
+'Tan, Jin Chong'
+'Lloyd, Gareth O.'
+_publ_section_title
+;
+ Alternative synthetic methodology for amide formation in the
+ post-synthetic modification of Ti-MIL125-NH2
+;
+_journal_issue                   45
+_journal_name_full               CrystEngComm
+_journal_page_first              9368
+_journal_paper_doi               10.1039/c3ce41332b
+_journal_volume                  15
+_journal_year                    2013
+_chemical_formula_moiety         'C24 H17 N3 O18 Ti4, 11(H2 O)'
+_chemical_formula_sum            'C24 H39 N3 O29 Ti4'
+_chemical_formula_weight         1450.95
+_chemical_name_common            MIL125-NH2
+_chemical_name_systematic        ?
+_space_group_crystal_system      tetragonal
+_space_group_IT_number           139
+_space_group_name_Hall           '-I 4 2'
+_space_group_name_H-M_alt        'I 4/m m m'
+_symmetry_space_group_name_Hall  '-I 4 2'
+_symmetry_space_group_name_H-M   'I 4/m m m'
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_formula_units_Z            2
+_cell_length_a                   18.7028(47)
+_cell_length_b                   18.7028(47)
+_cell_length_c                   18.2028(60)
+_cell_measurement_temperature    295
+_cell_volume                     6367(3)
+_computing_cell_refinement       'Topas Academic (Coelho 2007)'
+_computing_data_collection       'X'Pert Data Collector (Panalytical)'
+_computing_structure_refinement  'Topas Academic (Coelho 2007)'
+_diffrn_ambient_temperature      295
+_diffrn_detector                 X'Celerator
+_diffrn_measurement_device_type  'Panalytical X'pert Powder'
+_diffrn_radiation_monochromator  none
+_diffrn_source                   'sealed X-ray tube'
+_diffrn_source_target            Cu
+_exptl_crystal_density_diffrn    0.757
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_F_000             1450
+_pd_char_colour                  Yellow
+_pd_instr_location               ' ?'
+_pd_meas_2theta_range_inc        0.002
+_pd_meas_2theta_range_max        40
+_pd_meas_2theta_range_min        5
+_pd_meas_number_of_points        17500
+_pd_meas_scan_method             cont
+_pd_prep_temperature             295
+_pd_proc_ls_background_function  'Chebyshev polynomial'
+_pd_proc_ls_pref_orient_corr
+; PO_Spherical_Harmonics(sh, 4 load sh_Cij_prm {
+    y00   !sh_c00  1.00000
+    y20   sh_c20   1.35341`
+    y40   sh_c40  -0.33871`
+    y44p  sh_c44p -0.04240`
+    } )
+;
+_pd_proc_ls_profile_function     pseudo-Voigt
+_pd_proc_ls_prof_R_factor        0.09098
+_pd_proc_ls_prof_wR_expected     0.03159
+_pd_proc_ls_prof_wR_factor       0.14731
+_pd_spec_mounting                ' packed powder pellet'
+_pd_spec_mount_mode              reflection
+_pd_spec_shape                   flat_sheet
+_pd_spec_size_axial              14
+_pd_spec_size_equat              10
+_pd_spec_size_thick              0.5
+_refine_ls_extinction_method     none
+_refine_ls_goodness_of_fit_all   4.663
+_refine_ls_matrix_type           fullcycle
+_refine_ls_number_constraints    0
+_refine_ls_number_parameters     24
+_refine_ls_number_restraints     0
+_refine_ls_R_I_factor            0.06929
+_refine_ls_structure_factor_coef Inet
+_refine_ls_weighting_details     1/[Y~i~+\s(Y~i~)]
+_refine_ls_weighting_scheme      sigma
+_cod_data_source_file            c3ce41332b.txt
+_cod_data_source_block           MIL125NH2nH2O
+_cod_depositor_comments
+;
+The following automatic conversions were performed:
+
+'_space_group_crystal_system' value 'Tetragonal' changed to
+'tetragonal' according to
+/home/saulius/struct/CIF-dictionaries/cif_core.dic dictionary named
+'cif_core.dic' version 2.4.2 from 2011-04-26.
+
+Automatic conversion script
+Id: cif_fix_values 1891 2012-01-12 08:04:46Z andrius 
+;
+_cod_original_cell_volume        6367.3(38)
+_cod_database_code               7211159
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 '-x, -y, -z'
+2 '-x, -y, z'
+3 '-x, y, -z'
+4 '-x, y, z'
+5 '-y, -x, -z'
+6 '-y, -x, z'
+7 '-y, x, -z'
+8 '-y, x, z'
+9 'y, -x, -z'
+10 'y, -x, z'
+11 'y, x, -z'
+12 'y, x, z'
+13 'x, -y, -z'
+14 'x, -y, z'
+15 'x, y, -z'
+16 'x, y, z'
+17 '-x+1/2, -y+1/2, -z+1/2'
+18 '-x+1/2, -y+1/2, z+1/2'
+19 '-x+1/2, y+1/2, -z+1/2'
+20 '-x+1/2, y+1/2, z+1/2'
+21 '-y+1/2, -x+1/2, -z+1/2'
+22 '-y+1/2, -x+1/2, z+1/2'
+23 '-y+1/2, x+1/2, -z+1/2'
+24 '-y+1/2, x+1/2, z+1/2'
+25 'y+1/2, -x+1/2, -z+1/2'
+26 'y+1/2, -x+1/2, z+1/2'
+27 'y+1/2, x+1/2, -z+1/2'
+28 'y+1/2, x+1/2, z+1/2'
+29 'x+1/2, -y+1/2, -z+1/2'
+30 'x+1/2, -y+1/2, z+1/2'
+31 'x+1/2, y+1/2, -z+1/2'
+32 'x+1/2, y+1/2, z+1/2'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_symmetry_multiplicity
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+_atom_site_B_iso_or_equiv
+Ti Ti 0 0.2083 0.074 0.5 0.5 -3.3(17)
+O1 O 0 0.3111 0.058 0.5 0.5 -3.3(17)
+O2 O 0 0.1819 0 0.4265 0.5 -3.3(17)
+O3 O 0 0.2259 0.1442 0.4268 1 -3.3(17)
+O4 O 0 0.1074 0.1074 0.5 0.25 -3.3(17)
+C1 C 0 0.3507 0 0.5 0.25 -3.3(17)
+C2 C 0 0.4265 0 0.5 0.25 -3.3(17)
+C3 C 0 0.46333 0.06514 0.5 0.5 -3.3(17)
+C4 C 0 0.194 0.194 0.4023 0.5 -3.3(17)
+C5 C 0 0.2225 0.2225 0.3209 0.5 -3.3(17)
+C6 C 0 0.19291 0.28122 0.28426 1 -3.3(17)
+N2 N 0 0.13742 0.31587 0.3191 0.25 -3.3(17)
+N1 N 0 0.42348 0.12294 0.5 0.125 -3.3(17)
+H4 H 0 0.4343 0.10725 0.5 0.375 -3.3(17)
+H5 H 0 0.15308 0.30609 0.30927 0.75 -3.3(17)
+Ow2 O 0 0.07951 0.07951 0.28963 1 20.0(36)
+Ow3 O 0 0 0 0.42831 0.25 20.0(36)
+Ow4 O 0 0 0 0 0.125 20.0(36)
+Ow5 O 0 0 0.31989 0.16264 0.5 20.0(36)
+Ow6 O 0 0 0.14985 0.16602 0.5 20.0(36)
+Ow7 O 0 0 0.15644 0 0.25 20.0(36)
+Ow8 O 0 0.15062 -0.15062 0.1806 1 20.0(36)
+Ow9 O 0 0 0.5 0.25 0.125 20.0(36)
+loop_
+_diffrn_radiation_type
+_diffrn_radiation_wavelength
+CuK\a~1~ 1.54056
+CuK\a~2~ 1.54439
