@@ -1,0 +1,26 @@
+## Usage
+
+1. mv vertex_assignment.txt vertex_assignment_original.txt 
+2. vim vertex_assignment.txt
+#-------------------------------------
+MOF_name: MOF_Zn_bdc
+Topology: pcu
+vertex assignment: 6c_Zn_1_Ch.cif
+edge assignment: 1B_1TrU.cif
+#-------------------------------------
+3. python tobacco.py
+4. (see) output_cifs
+
+# Note: All combinations of data in the files below will be considered.
+nodes
+edges
+template
+
+# Note:
+ls nodes_database
+ls edges_database
+ls template_database
+
+# Note: configuration.py
+USER_SPECIFIED_NODE_ASSIGNMENT = True
+COMBINATORIAL_EDGE_ASSIGNMENT = False
