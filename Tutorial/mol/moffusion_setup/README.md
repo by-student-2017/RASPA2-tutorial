@@ -26,6 +26,8 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 - Note: After http://localhost:8888/?token=, copy and paste the alphanumeric characters that appear after ?token= into the URL of your web browser.
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
+- If you use a CPU, there will be many things that need to be rewritten, so it is best to think of a GPU as essential.
+- For other GPUs, please consult Chat-GPT and rewrite the Bash and Docker files. I think you can use this as a base. All installations are free.
 
 ## saved_ckpt
 - [vqvae.pth](https://figshare.com/ndownloader/files/46925977)
