@@ -25,3 +25,14 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 - Note: After http://localhost:8888/?token=, copy and paste the alphanumeric characters that appear after ?token= into the URL of your web browser.
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
+
+# saved_ckpt
+```
+https://figshare.com/ndownloader/files/46925977
+https://figshare.com/ndownloader/files/46925971
+https://figshare.com/ndownloader/files/46925974
+https://figshare.com/ndownloader/files/46931689
+https://figshare.com/ndownloader/files/46926004
+https://figshare.com/ndownloader/files/46931701
+https://figshare.com/ndownloader/files/46925995
+```
