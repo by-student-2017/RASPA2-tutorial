@@ -23,14 +23,14 @@ conda install matplotlib
 ```
 
 
-# Clone the GitHub repository
+## Clone the GitHub repository
 ```
 git clone https://github.com/tobacco-mofs/tobacco_3.0.git
 cd tobacco_3.0
 ```
 
 
-# Download the topology database
+## Download the topology database
 ```
 python tobacco.py --get_topols_db
 ```
