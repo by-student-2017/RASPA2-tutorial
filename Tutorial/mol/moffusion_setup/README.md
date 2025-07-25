@@ -26,7 +26,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - Note: After http://localhost:8888/?token=, copy and paste the alphanumeric characters that appear after ?token= into the URL of your web browser.
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
 
-# saved_ckpt
+## saved_ckpt
 - [vqvae.pth](https://figshare.com/ndownloader/files/46925977)
 - [mof_constructor_topo.pth](https://figshare.com/ndownloader/files/46925971)
 - [mof_constructor_BB.pth](https://figshare.com/ndownloader/files/46925974)
@@ -54,3 +54,6 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
   year={2024},
 }
 ```
+
+## License
+This project is licensed under the MIT License. Please check the LICENSE file for more information.
