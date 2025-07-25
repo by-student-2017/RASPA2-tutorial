@@ -1,4 +1,4 @@
-# MOFFUSION Installation Recipe (Edit: 2025/07/25)
+# MOFFUSION (v1.0.0) Installation Recipe (Edit: 2025/07/25)
 ## Docker Engine (free), GPU: RTX 3070, OS: Ubuntu 22.04 LTS, WSL2, Windows 11
 
 
