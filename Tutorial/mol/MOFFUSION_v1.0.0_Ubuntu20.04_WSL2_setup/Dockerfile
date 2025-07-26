@@ -40,6 +40,21 @@ RUN /opt/conda/bin/conda run -n moffusion conda install pytorch==1.11.0 torchvis
 # Install PyTorch3D via pip wheel
 RUN /opt/conda/bin/conda run -n moffusion pip install pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py39_cu113_pyt1110/download.html
 
+
+#---------------------------------------------------------------------
+## Install PyTorch with CUDA 11.8 (compatible with PyTorch 1.13.1)
+#RUN /opt/conda/bin/conda run -n moffusion conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 cudatoolkit=11.8 -c pytorch -y && \
+#    /opt/conda/bin/conda run -n moffusion conda install -c conda-forge cudatoolkit-dev -y
+
+## Install build dependencies
+#RUN /opt/conda/bin/conda run -n moffusion pip install cmake ninja
+
+## Clone and build PyTorch3D from source
+#RUN git clone https://github.com/facebookresearch/pytorch3d.git && \
+#    cd pytorch3d && \
+#    /opt/conda/bin/conda run -n moffusion pip install -e .
+#---------------------------------------------------------------------
+
 # Install additional dependencies
 RUN /opt/conda/bin/conda run -n moffusion conda install -c fvcore -c iopath -c conda-forge fvcore iopath -y && \
     /opt/conda/bin/conda run -n moffusion pip install h5py joblib termcolor scipy einops tqdm matplotlib opencv-python \
