@@ -38,6 +38,7 @@ conda activate moffusion
 pip uninstall numpy pymatgen opencv-python -y
 pip install numpy==1.26.4
 pip install pymatgen==2023.8.10
+pip install opencv-python==4.9.0.80
 ```
 
 
