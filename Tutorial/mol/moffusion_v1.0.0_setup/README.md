@@ -31,6 +31,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 
 ## saved_ckpt
+- You need to manually download the following *.pth and put it in saved_ckpt. Also, please make sure that saved_ckpt and *.pth are in MOFFUSION. If not, you can manually copy saved_ckpt to MOFFUSION.
 - [vqvae.pth](https://figshare.com/ndownloader/files/46925977)
 - [mof_constructor_topo.pth](https://figshare.com/ndownloader/files/46925971)
 - [mof_constructor_BB.pth](https://figshare.com/ndownloader/files/46925974)
