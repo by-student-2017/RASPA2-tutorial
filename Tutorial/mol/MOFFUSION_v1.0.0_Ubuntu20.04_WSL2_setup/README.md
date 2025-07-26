@@ -1,6 +1,7 @@
 # NOFFUSION v.1.0.0 setup (Edit: 2025/07/26) 
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 20.04 LTS, WSL2, Windows 11
 
+
 ## Installation
 ```
 bash setup_miniconda3.sh
@@ -75,6 +76,17 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - [moffusion_topo.pth](https://figshare.com/ndownloader/files/46926004)
 - [moffusion_H2.pth](https://figshare.com/ndownloader/files/46931701)
 - [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
+
+
+## Recommended Environment
+
+Considering the release periods of CUDA 11.3 and Python 3.9.18, it is reasonable to assume that library versions aligned with Ubuntu 20.04 LTS are the most compatible and stable. Ubuntu 20.04 LTS offers long-term support until April 2025, making it particularly suitable for older machines and ensuring better compatibility with libraries that do not explicitly specify version constraints.
+
+We recommend using:
+- Ubuntu 20.04 LTS
+- CUDA 11.3
+- Python 3.9.18
+- PyTorch 1.11.0
 
 
 ## Citation
