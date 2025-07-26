@@ -35,10 +35,12 @@ sudo dockerd                 # Restart the Docker daemon
 ```
 conda create -n moffusion python=3.10 -y
 conda activate moffusion
-pip uninstall numpy pymatgen opencv-python -y
+pip uninstall numpy pymatgen opencv-python transformers -y
 pip install numpy==1.26.4
 pip install pymatgen==2023.8.10
 pip install opencv-python==4.9.0.80
+pip install huggingface_hub==0.9.1
+pip install transformers==4.22.2
 ```
 
 
