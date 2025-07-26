@@ -33,8 +33,6 @@ sudo dockerd                 # Restart the Docker daemon
 
 
 ```
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
-conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 conda create -n moffusion python=3.10 -y
 conda activate moffusion
 pip uninstall numpy pymatgen opencv-python -y
