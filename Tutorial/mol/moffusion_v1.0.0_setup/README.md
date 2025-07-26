@@ -1,5 +1,5 @@
-#-----------------------------------------------------------
-# Docker Engine (free), RTX 3070, Ubuntu 24.04 LTS, WSL2, Windows 11
+# NOFFUSION v.1.0.0 setup (Edit: 2025/07/25) 
+## Docker Engine (free), GPU: RTX 3070, OS: Ubuntu 24.04 LTS, WSL2, Windows 11
 
 
 ```
@@ -26,4 +26,28 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 - Note: After http://localhost:8888/?token=, copy and paste the alphanumeric characters that appear after ?token= into the URL of your web browser.
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
-#-----------------------------------------------------------
+
+
+## Citation
+1. Journal version
+```
+@inproceedings{,
+  author={Park, Junkil and Lee, Youhan and Kim, Jihan},
+  title={Multi-modal conditional diffusion model using signed distance functions for metal-organic frameworks generation},
+  Journal={Nature Communications},
+  year={2024},
+}
+```
+2. arXiv version
+```
+@article{,
+  author={Park, Junkil and Lee, Youhan and Kim, Jihan},
+  title={Multi-modal conditioning for metal-organic frameworks generation using 3D modeling techniques},
+  Journal={chemrxiv},
+  year={2024},
+}
+```
+
+
+##License
+- This project is licensed under the MIT License. Please check the LICENSE file for more information.
