@@ -37,6 +37,9 @@ conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/ma
 conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 conda create -n moffusion python=3.10 -y
 conda activate moffusion
+pip uninstall numpy pymatgen opencv-python -y
+pip install numpy==1.26.4
+pip install pymatgen==2023.8.10
 ```
 
 
