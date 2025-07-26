@@ -1,4 +1,4 @@
-# Use NVIDIA CUDA base image compatible with RTX 7030
+# Use NVIDIA CUDA base image compatible with RTX 3070
 FROM docker.io/nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 
 # Set environment variables
