@@ -28,6 +28,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
 - It is difficult to set up a GPU in Podman, and it is necessary to rewrite the python code to run it on a CPU. Therefore, I used the free Docker engine.
 - For other GPUs, please show Chat-GPT the files here and try to get it to support your GPU.
+- This site was created using WSL2, so if you have any problems with line breaks, please use the command dos2unix.
 
 
 ## saved_ckpt
