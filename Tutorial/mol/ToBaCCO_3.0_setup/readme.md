@@ -64,5 +64,7 @@ ls template_database
 
 
 ## Note: configuration.py
-- USER_SPECIFIED_NODE_ASSIGNMENT = True
-- COMBINATORIAL_EDGE_ASSIGNMENT = False
+```
+USER_SPECIFIED_NODE_ASSIGNMENT = True
+COMBINATORIAL_EDGE_ASSIGNMENT = False
+```
