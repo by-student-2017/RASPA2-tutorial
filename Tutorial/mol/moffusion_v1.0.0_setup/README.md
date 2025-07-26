@@ -1,7 +1,7 @@
 # NOFFUSION v.1.0.0 setup (Edit: 2025/07/25) 
 ## Docker Engine (free), GPU: RTX 3070, OS: Ubuntu 24.04 LTS, WSL2, Windows 11
 
-
+## Installation
 ```
 bash install_docker_cuda_wsl2.sh
 ```
@@ -28,6 +28,16 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
 
 
+## saved_ckpt
+- [vqvae.pth](https://figshare.com/ndownloader/files/46925977)
+- [mof_constructor_topo.pth](https://figshare.com/ndownloader/files/46925971)
+- [mof_constructor_BB.pth](https://figshare.com/ndownloader/files/46925974)
+- [moffusion_uncond.pth](https://figshare.com/ndownloader/files/46931689)
+- [moffusion_topo.pth](https://figshare.com/ndownloader/files/46926004)
+- [moffusion_H2.pth](https://figshare.com/ndownloader/files/46931701)
+- [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
+
+
 ## Citation
 1. Journal version
 ```
@@ -49,5 +59,5 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 
 
-##License
+## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
