@@ -35,7 +35,7 @@ python tobacco.py --get_topols_db
 ```
 
 
-# ToBaCCO 3.0 usage (Edit: 25025/07/10)
+# ToBaCCO 3.0 usage (Edit: 2025/07/10)
 ## OS: Ubuntu 22.04 LTS, WSL2, Windows11, GPU: RTX 3070
 ```
 1. mv vertex_assignment.txt vertex_assignment_original.txt 
