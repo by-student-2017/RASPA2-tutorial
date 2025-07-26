@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install Docker Engine + NVIDIA Container Toolkit on Ubuntu 24.04 (WSL2)
+# Install Docker Engine + NVIDIA Container Toolkit on Ubuntu 22.04 (WSL2)
 # Edit: 2025/07/25
 
 sudo apt update && sudo apt upgrade -y
