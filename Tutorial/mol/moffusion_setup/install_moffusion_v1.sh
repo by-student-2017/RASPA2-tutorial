@@ -18,6 +18,7 @@ mv MOFFUSION-1.0.0 MOFFUSION
 echo "=== Step 4: Creating saved_ckpt directory ==="
 mkdir -p MOFFUSION/saved_ckpt
 echo "Manually place the required .pth files in MOFFUSION/saved_ckpt."
+cp -r saved_ckpt ./MOFFUSION/
 
 echo "=== Step 5: Building Docker image ==="
 docker build -t moffusion --build-arg BASE_IMAGE=nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04 ./
