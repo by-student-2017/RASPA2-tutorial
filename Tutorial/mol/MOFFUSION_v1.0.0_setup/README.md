@@ -33,7 +33,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## Note
 - In my environment, ffmpeg is very old, version 2.1 (released in 2013), and the direct cause of the error is that the palettegen and paletteuse filters are not supported. Therefore, I slightly rewrote visualizer.py in MOFFUSION's visualize to use PillowWriter.
-- The results of the demos are stored in the samples directory in MOFFUSION, named after each demo. Comments on the results are shown in the jupyter note.
+- The results of the demos are stored in the samples directory in MOFFUSION, named after each demo. Comments on the results are shown in the jupyter notebook.
 
 
 ## saved_ckpt
