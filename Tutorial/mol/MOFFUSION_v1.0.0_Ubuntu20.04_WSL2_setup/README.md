@@ -138,13 +138,12 @@ To enable GPU acceleration inside Docker containers:
 
 ### Example Docker Run Command
 
-```bash
+```
 docker run --gpus all -it \
   -v $(pwd):/workspace \
   --workdir /workspace \
   moffusion:cuda11.3-py3.9 \
-  bash
-
+```
 
 ## Citation
 1. Journal version
