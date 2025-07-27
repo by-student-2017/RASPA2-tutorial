@@ -54,6 +54,7 @@ sudo dockerd                 # Restart the Docker daemon
 
 
 - Create the one for moffusion with conda create
+- Note: In another terminal run:
 ```
 conda create -n moffusion python=3.9.18 -y
 conda activate moffusion
@@ -69,8 +70,6 @@ sudo apt install libopenh264-7
 sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.7 /usr/lib/x86_64-linux-gnu/libopenh264.so.5
 ```
 
-
-- Note: In another terminal run:
 ```
 bash install_pytorch_cuda113.sh
 pip uninstall torch torchvision torchaudio -y
