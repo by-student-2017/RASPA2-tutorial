@@ -154,10 +154,11 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 
 | Component     | Version        | Notes                                                                 |
 |--------------|----------------|-----------------------------------------------------------------------|
-| OS           | Ubuntu 22.04 LTS | Host system running under WSL2                                       |
-| CUDA         | 11.8            | Compatible with newer NVIDIA drivers and WSL2 integration            |
+| OS           | Ubuntu 24.04 LTS | Host system running under WSL2                                       |
+| CUDA         | 11.3            | Compatible with newer NVIDIA drivers and WSL2 integration            |
 | Python       | 3.9.18          | Maintains compatibility with MOFFUSION                               |
-| PyTorch      | 1.13.1          | Recommended for CUDA 11.8                                            |
+| PyTorch      | 1.13.1          | Recommended for CUDA 11.3                                            |
+- Due to issues with the wheel and libc10_cuda.so for pytorch3d, it will not work unless you use 11.3, not 11.8.
 
 ---
 
