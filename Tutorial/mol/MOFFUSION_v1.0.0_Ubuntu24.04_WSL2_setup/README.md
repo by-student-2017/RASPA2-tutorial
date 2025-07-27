@@ -189,7 +189,6 @@ docker run --gpus all -it \
 > CUDA is **backwards compatible**, so applications built with CUDA 11.3 can run on newer GPUs, such as the **RTX 3070** and other models released after **2023**, as long as the installed drivers support CUDA 11.3.
 > However, newer GPUs, such as the **RTX 40 series** and **Blackwell architecture**, may benefit from optimizations available in newer versions of the CUDA Toolkit.
 > CUDA 11.3 will work with these GPUs, but might not perform optimally or take advantage of all hardware features.
-> In addition, **CUDA 11.8** has improved memory management and allocation strategies that may mitigate GPU memory issues in some Docker environments.
 
 ---
 
