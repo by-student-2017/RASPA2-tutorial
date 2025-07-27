@@ -39,23 +39,29 @@ sudo kill <PID>              # Stop the running Docker daemon process
 sudo rm /var/run/docker.pid  # Remove the leftover PID file
 sudo dockerd                 # Restart the Docker daemon
 ```
+- If the above doesn't work, try consulting Copilot.
+```
+echo "Stopping any running dockerd..."
+sudo pkill dockerd
+echo "Removing lock files..."
+sudo rm -f /var/run/docker.pid
+sudo rm -f /var/lib/docker/volumes/metadata.db
+sudo rm -f /var/lib/docker/network/files/local-kv.db
+echo "Starting dockerd..."
+sudo dockerd                 # Restart the Docker daemon
+```
 
 
 ```
 conda create -n moffusion python=3.9.18 -y
 conda activate moffusion
-pip uninstall numpy pymatgen opencv-python transformers ffmpeg -y
+pip uninstall numpy pymatgen opencv-python transformers -y
 pip install numpy==1.26.4
-pip install pymatgen==2023.11.12
+pip install pymatgen==2023.8.10
 pip install opencv-python==4.9.0.80
 pip install "huggingface-hub>=0.16.4,<1.0.0"
 pip install tokenizers==0.21.2
 pip install transformers==4.22.2
-pip install chgnet==0.3.5
-pip install pormake==0.2.2
-pip install ffmpeg-python
-sudo apt install libopenh264-6
-sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.6 /usr/lib/x86_64-linux-gnu/libopenh264.so.5
 ```
 
 
