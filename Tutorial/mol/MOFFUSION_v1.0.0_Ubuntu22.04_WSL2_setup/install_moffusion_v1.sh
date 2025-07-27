@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Download OFFUSION v1.0.0 and build the Docker image
+# Download MOFFUSION v1.0.0 and build the Docker image (Ubuntu 20.04 + CUDA 11.3)
 
 set -e
 
@@ -29,7 +29,7 @@ else
 fi
 
 echo "=== Step 5: Building Docker image ==="
-docker build -t moffusion --build-arg BASE_IMAGE=nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04 ./
+docker build -t moffusion .
 
 echo "=== Step 6: Running Docker container ==="
 docker run --rm -it -p 8888:8888 --gpus all \

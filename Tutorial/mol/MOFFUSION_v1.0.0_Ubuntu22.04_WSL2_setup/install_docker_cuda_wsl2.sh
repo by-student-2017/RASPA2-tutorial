@@ -1,7 +1,10 @@
 #!/bin/bash
 
 # Install Docker Engine + NVIDIA Container Toolkit on Ubuntu 22.04 (WSL2)
+# Adjusted for Ubuntu 20.04 compatibility
 # Edit: 2025/07/25
+
+set -e
 
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y ca-certificates curl gnupg lsb-release
@@ -10,12 +13,12 @@ sudo apt install -y ca-certificates curl gnupg lsb-release
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-# Add Docker repository
+# Add Docker repository (force focal for Ubuntu 20.04 compatibility)
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
-https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
+https://download.docker.com/linux/ubuntu focal stable" | \
 sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Docker Engine (free) Installation
+# Docker Engine Installation
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo usermod -aG docker $USER
@@ -25,8 +28,8 @@ sudo mkdir -p /etc/apt/keyrings
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
   sudo gpg --dearmor -o /etc/apt/keyrings/nvidia-docker.gpg
 
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | \
+# Force ubuntu20.04 distribution for NVIDIA Docker
+curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu20.04/nvidia-docker.list | \
   sed 's|deb |deb [signed-by=/etc/apt/keyrings/nvidia-docker.gpg] |' | \
   sudo tee /etc/apt/sources.list.d/nvidia-docker.list > /dev/null
 
