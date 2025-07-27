@@ -1,4 +1,4 @@
-# NOFFUSION v.1.0.0 setup (Edit: 2025/07/27) 
+# MOFFUSION v.1.0.0 setup (Edit: 2025/07/27) 
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 22.04 LTS, WSL2, Windows 11
 
 ## WSL2
