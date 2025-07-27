@@ -78,9 +78,9 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 - Note: After http://localhost:8888/?token=, copy and paste the alphanumeric characters that appear after ?token= into the URL of your web browser.
 - (double click) demo_H2.ipynb -> Run -> Run All Cells
+- It is difficult to set up a GPU in Podman, and it is necessary to rewrite the python code to run it on a CPU. Therefore, I used the free Docker engine.
 - For other GPUs, please show Chat-GPT the files here and try to get it to support your GPU.
 - This site was created using WSL2, so if you have any problems with line breaks, please use the command dos2unix.
-- It is difficult to set up a GPU in Podman, and it is necessary to rewrite the python code to run it on a CPU. Therefore, I used the free Docker engine.
 
 
 ## After that (after the second time or after restarting the PC, etc.)
@@ -105,8 +105,6 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - [moffusion_topo.pth](https://figshare.com/ndownloader/files/46926004)
 - [moffusion_H2.pth](https://figshare.com/ndownloader/files/46931701)
 - [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
-
-
 
 
 ## MOFFUSION Recommended Environment
@@ -143,7 +141,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 | PyTorch      | 1.11.0          | Verified to work with CUDA 11.3                                      |
 | Docker Engine| Latest          | GPU support via NVIDIA Container Toolkit                             |
 
-#### WSL2-Based Setup (Native Execution)
+### WSL2-Based Setup (Native Execution)
 
 | Component     | Version        | Notes                                                                 |
 |--------------|----------------|-----------------------------------------------------------------------|
@@ -154,7 +152,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 
 ---
 
-### GPU Support
+#### GPU Support
 
 To enable GPU acceleration inside Docker containers:
 
@@ -167,12 +165,34 @@ To enable GPU acceleration inside Docker containers:
 
 ### Example Docker Run Command
 
-```
+```bash
 docker run --gpus all -it \
   -v $(pwd):/workspace \
   --workdir /workspace \
   moffusion:cuda11.3-py3.9
-```
+
+
+## Troubleshooting GPU Memory Issues in MOFFUSION Notebooks
+
+When working with MOFFUSION notebooks, especially in environments like WSL2 or with limited GPU memory (e.g., RTX 3070 with 8GB VRAM), you may encounter kernel crashes or memory allocation errors. This guide provides best practices to help mitigate GPU memory issues.
+
+---
+
+### Best Practices to Avoid GPU Memory Problems
+
+#### 1. Close Other Jupyter Notebook Tabs
+- Other notebooks may retain models or data in GPU memory.
+- Close unused tabs to ensure memory is released.
+
+#### 2. Close Other Browser Tabs and Windows
+- Web pages using WebGL or GPU acceleration (e.g., YouTube, Google Earth) can consume GPU resources.
+- Close unnecessary tabs to reduce GPU load.
+
+#### 3. Terminate Unused Python Processes
+- Use the following command to identify and terminate idle Python processes:
+  ```bash
+  ps aux | grep python
+  ```
 
 
 ## Citation
