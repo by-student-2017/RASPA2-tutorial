@@ -93,6 +93,14 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - This site was created using WSL2, so if you have any problems with line breaks, please use the command dos2unix.
 
 
+## After that (after the second time or after restarting the PC, etc.)
+```
+conda activate moffusion
+cd MOFFUSION
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+```
+
+
 ## Note
 - Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of MOFFUSION/models/moffusion_text_model.py.
 - The results of the demos are stored in the "samples" directory in MOFFUSION, named after each demo. Comments on the results are shown in the "jupyter notebook".
