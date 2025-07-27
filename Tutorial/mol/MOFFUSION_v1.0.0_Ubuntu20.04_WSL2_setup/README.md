@@ -141,7 +141,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 | PyTorch      | 1.11.0          | Verified to work with CUDA 11.3                                      |
 | Docker Engine| Latest          | GPU support via NVIDIA Container Toolkit                             |
 
-### WSL2-Based Setup (Native Execution)
+#### WSL2-Based Setup (Native Execution)
 
 | Component     | Version        | Notes                                                                 |
 |--------------|----------------|-----------------------------------------------------------------------|
@@ -152,7 +152,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 
 ---
 
-#### GPU Support
+### GPU Support
 
 To enable GPU acceleration inside Docker containers:
 
