@@ -177,7 +177,8 @@ docker run --gpus all -it \
 ### Compatibility Note
 
 > **CUDA 11.3 Compatibility**:  
-> Although CUDA 11.3 was released in early 2021, it remains compatible with many later-generation GPUs, including the RTX 3070 and other models released in or after 2023, as long as the GPU's compute capability is supported and the driver includes CUDA 11.3 runtime compatibility. This ensures that MOFFUSION can leverage GPU acceleration even on newer hardware, provided the correct driver and CUDA runtime are installed.
+> CUDA has **backward compatibility**, meaning applications built with CUDA 11.3 can run on newer GPUs, such as the **RTX 3070** and other models released in or after **2023**, **as long as the installed driver supports CUDA 11.3**.  
+> However, newer GPUs—such as the **RTX 40 series** or **Blackwell architecture**—may benefit from optimizations available in more recent CUDA Toolkit versions. While CUDA 11.3 can still function on these GPUs, it may not deliver optimal performance or utilize all hardware features.
 
 ---
 
