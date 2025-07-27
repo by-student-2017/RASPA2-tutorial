@@ -11,7 +11,7 @@ https://zenodo.org/records/11237900
 ToBaCCo（Topological Building Block Construction）: https://github.com/tobacco-mofs/tobacco_3.0
 
 # VQ-VAE（Vector Quantized VAE）
-https://github.com/parkjunkil/MOFFUSION
+MOFFUSION: https://github.com/parkjunkil/MOFFUSION
 
 https://pypi.org/project/pycofbuilder/
 https://github.com/Zhangshitong-hub/MOF-MembraneConstructor
