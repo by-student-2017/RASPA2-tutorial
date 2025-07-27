@@ -41,7 +41,7 @@ sudo kill <PID>              # Stop the running Docker daemon process
 sudo rm /var/run/docker.pid  # Remove the leftover PID file
 sudo dockerd                 # Restart the Docker daemon
 ```
-- If the above doesn't work, try consulting Copilot.
+- If the above doesn't work, try consulting Copilot. (For example, the following command is suggested:)
 ```
 echo "Stopping any running dockerd..."
 sudo pkill dockerd
