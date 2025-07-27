@@ -89,6 +89,61 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
 
 
+## MOFFUSION Recommended Environment
+
+This document outlines the recommended environment for running **MOFFUSION**, focusing on stability, compatibility, and long-term support. It includes guidance for both **Docker-based** and **WSL2-based** setups, with considerations for GPU acceleration.
+
+### Overview
+
+MOFFUSION relies heavily on GPU acceleration and specific library versions. While the core dependencies are aligned with **Ubuntu 20.04 LTS**, we recommend using **Ubuntu 22.04 LTS** for host systems due to its extended support and compatibility.
+
+#### Key Points
+
+- **Library Compatibility**: Most libraries (e.g., CUDA 11.3, Python 3.9.18) were released during the Ubuntu 20.04 LTS era.
+- **Host OS Recommendation**: Ubuntu 22.04 LTS is preferred for host systems due to support until **April 2027**.
+- **Docker Containers**: Use Ubuntu 20.04 LTS as the base image inside containers to ensure compatibility.
+- **WSL2 Environment**: Ubuntu 22.04 LTS is used with CUDA 11.8 for better integration with newer drivers and toolkits.
+
+### Recommended Configurations
+
+### Docker-Based Setup (Containerized Execution)
+
+| Component     | Version        | Notes                                                                 |
+|--------------|----------------|-----------------------------------------------------------------------|
+| Base Image   | Ubuntu 20.04 LTS | Ensures compatibility with MOFFUSION dependencies                    |
+| CUDA         | 11.3            | Stable and widely supported for PyTorch 1.11.0                        |
+| Python       | 3.9.18          | Compatible with MOFFUSION and CUDA 11.3                              |
+| PyTorch      | 1.11.0          | Verified to work with CUDA 11.3                                      |
+| Docker Engine| Latest          | GPU support via NVIDIA Container Toolkit                             |
+
+### WSL2-Based Setup (Native Execution)
+
+| Component     | Version        | Notes                                                                 |
+|--------------|----------------|-----------------------------------------------------------------------|
+| OS           | Ubuntu 22.04 LTS | Host system running under WSL2                                       |
+| CUDA         | 11.8            | Compatible with newer NVIDIA drivers and WSL2 integration            |
+| Python       | 3.9.18          | Maintains compatibility with MOFFUSION                               |
+| PyTorch      | 1.13.1          | Recommended for CUDA 11.8                                            |
+
+## GPU Support
+
+To enable GPU acceleration inside Docker containers:
+
+1. Install **Docker Engine** (not Docker Desktop) on Ubuntu 22.04 LTS.
+2. Install **NVIDIA Container Toolkit**.
+3. Use a Docker image based on Ubuntu 20.04 LTS with CUDA 11.3 and Python 3.9.18.
+4. Run MOFFUSION inside the container with GPU access.
+
+### Example Docker Run Command
+
+```
+docker run --gpus all -it \
+  -v $(pwd):/workspace \
+  --workdir /workspace \
+  moffusion:cuda11.3-py3.9 \
+```
+
+
 ## Citation
 1. Journal version
 ```
