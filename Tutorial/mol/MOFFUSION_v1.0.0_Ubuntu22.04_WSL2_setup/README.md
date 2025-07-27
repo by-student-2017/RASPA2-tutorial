@@ -71,7 +71,15 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - For other GPUs, please show Copilot the files here and try to get it to support your GPU.
 - This site was created using WSL2, so if you have any problems with line breaks, please use the command dos2unix.
 - It is difficult to set up a GPU in Podman, and it is necessary to rewrite the python code to run it on a CPU. Therefore, I used the free Docker engine.
-- 
+
+
+## After that (after the second time or after restarting the PC, etc.)
+```
+conda activate moffusion
+cd MOFFUSION
+jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+```
+
 
 ## Note
 - Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of MOFFUSION/models/moffusion_text_model.py.
