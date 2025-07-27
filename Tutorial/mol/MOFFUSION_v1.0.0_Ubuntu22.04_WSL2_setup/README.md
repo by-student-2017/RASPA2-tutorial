@@ -54,6 +54,7 @@ sudo dockerd                 # Restart the Docker daemon
 
 
 - Create the one for moffusion with conda create
+- Note: In another terminal run:
 ```
 conda create -n moffusion python=3.9.18 -y
 conda activate moffusion
@@ -70,7 +71,6 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.6 /usr/lib/x86_64-linux-gnu/
 ```
 
 
-- Note: In another terminal run:
 ```
 bash install_pytorch_cuda113.sh
 bash install_moffusion_v1.sh
