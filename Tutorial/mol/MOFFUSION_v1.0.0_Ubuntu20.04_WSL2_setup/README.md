@@ -1,6 +1,13 @@
 # NOFFUSION v.1.0.0 setup (Edit: 2025/07/26) 
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 20.04 LTS, WSL2, Windows 11
 
+## WSL1
+```
+wsl --help
+wsl -l -o
+wsl --install Ubuntu-22.04
+```
+
 
 ## Installation
 ```
@@ -34,14 +41,20 @@ sudo dockerd                 # Restart the Docker daemon
 
 
 ```
-conda create -n moffusion python=3.10 -y
+conda create -n moffusion python=3.9.18 -y
 conda activate moffusion
-pip uninstall numpy pymatgen opencv-python transformers -y
+pip uninstall numpy pymatgen opencv-python transformers ffmpeg -y
 pip install numpy==1.26.4
-pip install pymatgen==2023.8.10
+pip install pymatgen==2023.11.12
 pip install opencv-python==4.9.0.80
-pip install huggingface_hub==0.9.1
+pip install "huggingface-hub>=0.16.4,<1.0.0"
+pip install tokenizers==0.21.2
 pip install transformers==4.22.2
+pip install chgnet==0.3.5
+pip install pormake==0.2.2
+pip install ffmpeg-python
+sudo apt install libopenh264-6
+sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.6 /usr/lib/x86_64-linux-gnu/libopenh264.so.5
 ```
 
 
@@ -63,7 +76,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 
 ## Note
-- demo_text.ipynb stops midway. I have not yet been able to build the environment for this.
+- Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of MOFFUSION/models/moffusion_text_model.py.
 - The results of the demos are stored in the "samples" directory in MOFFUSION, named after each demo. Comments on the results are shown in the "jupyter notebook".
 
 
@@ -78,15 +91,46 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
 
 
-## Recommended Environment
+# Recommended Environment for MOFFUSION
 
-Considering the release periods of CUDA 11.3 and Python 3.9.18, it is reasonable to assume that library versions aligned with Ubuntu 20.04 LTS are the most compatible and stable. Ubuntu 20.04 LTS offers long-term support until April 2025, making it particularly suitable for older machines and ensuring better compatibility with libraries that do not explicitly specify version constraints.
+This document outlines the recommended environment for running **MOFFUSION**, with a focus on stability, compatibility, and long-term support. While the library versions are aligned with Ubuntu 20.04 LTS, we recommend using **Ubuntu 22.04 LTS** for its extended support and compatibility.
 
-We recommend using:
-- Ubuntu 20.04 LTS
-- CUDA 11.3
-- Python 3.9.18
-- PyTorch 1.11.0
+## Why Ubuntu 22.04 LTS?
+
+Although CUDA 11.3 and Python 3.9.18 were originally released during the Ubuntu 20.04 LTS era, Ubuntu 22.04 LTS offers:
+
+- Full compatibility with Ubuntu 20.04-aligned libraries
+- Extended support until **April 2027**
+- Better long-term maintainability and security updates
+
+## Recommended Software Stack
+
+| Component     | Version        | Notes                                                                 |
+|--------------|----------------|-----------------------------------------------------------------------|
+| OS           | Ubuntu 22.04 LTS | Libraries aligned with Ubuntu 20.04 LTS for compatibility            |
+| CUDA         | 11.3            | Stable and widely supported for PyTorch 1.11.0                        |
+| Python       | 3.9.18          | Compatible with MOFFUSION and CUDA 11.3                              |
+| PyTorch      | 1.11.0          | Verified to work with CUDA 11.3                                      |
+| Docker Engine| Latest (via WSL2 or native) | GPU support via NVIDIA Container Toolkit                         |
+| NVIDIA Container Toolkit | Latest | Required for GPU acceleration inside Docker containers              |
+
+## Docker & GPU Support
+
+To run MOFFUSION with GPU acceleration inside Docker:
+
+1. **Install Docker Engine** (not Docker Desktop) on Ubuntu 22.04 LTS.
+2. **Install NVIDIA Container Toolkit** to enable GPU passthrough.
+3. Use a Docker image based on Ubuntu 20.04 LTS to ensure library compatibility.
+4. Launch MOFFUSION inside a container with GPU access enabled.
+
+### Example Docker Run Command
+
+```bash
+docker run --gpus all -it \
+  -v $(pwd):/workspace \
+  --workdir /workspace \
+  moffusion:cuda11.3-py3.9 \
+  bash
 
 
 ## Citation
