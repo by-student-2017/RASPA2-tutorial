@@ -212,6 +212,12 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 #### 4. Code solutions
 - For code solutions, please refer to the additional description in demo_*.ipynb in seccess of MOFFUSION_v1.0.0_Ubuntu20.04_WSL2_setup ([2] and the end).
 
+#### 5. Restart (on Linux shell)
+- After closing the Jupyter notebooks, kill them with "Ctrl + C" in the Linux shell and restart them with the following command:
+  ```bash
+  wsl --shutdown
+  ```
+
 
 ## Citation
 1. Journal version
