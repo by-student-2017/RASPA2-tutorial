@@ -2,6 +2,7 @@
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 22.04 LTS, WSL2, Windows 11
 
 ## WSL2
+- Run the following in a Windows command prompt with administrator privileges:
 ```
 wsl --help
 wsl -l -o
