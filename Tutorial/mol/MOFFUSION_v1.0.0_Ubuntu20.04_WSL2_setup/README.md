@@ -172,6 +172,14 @@ docker run --gpus all -it \
   moffusion:cuda11.3-py3.9
 ```
 
+---
+
+### Compatibility Note
+
+> **CUDA 11.3 Compatibility**:  
+> Although CUDA 11.3 was released in early 2021, it remains compatible with many later-generation GPUs, including the **RTX 3070** and other Ampere-based models released in 2023. This ensures that MOFFUSION can leverage GPU acceleration even on newer hardware, provided the correct driver and CUDA runtime are installed.
+
+---
 
 ## Troubleshooting GPU Memory Issues in MOFFUSION Notebooks
 
