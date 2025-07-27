@@ -128,7 +128,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 - **Library Compatibility**: Most libraries (e.g., CUDA 11.3, Python 3.9.18) were released during the Ubuntu 20.04 LTS era.
 - **Host OS Recommendation**: Ubuntu 22.04 LTS is preferred for host systems due to support until **April 2027**.
 - **Docker Containers**: Use Ubuntu 20.04 LTS as the base image inside containers to ensure compatibility.
-- **WSL2 Environment**: Ubuntu 22.04 LTS is used with CUDA 11.8 for better integration with newer drivers and toolkits.
+- **WSL2 Environment**: Ubuntu 22.04 LTS is used with CUDA 11.3 for better integration with newer drivers and toolkits.
 
 ---
 
