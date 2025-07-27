@@ -38,6 +38,17 @@ sudo kill <PID>              # Stop the running Docker daemon process
 sudo rm /var/run/docker.pid  # Remove the leftover PID file
 sudo dockerd                 # Restart the Docker daemon
 ```
+- If the above doesn't work, try consulting Copilot.
+```
+echo "Stopping any running dockerd..."
+sudo pkill dockerd
+echo "Removing lock files..."
+sudo rm -f /var/run/docker.pid
+sudo rm -f /var/lib/docker/volumes/metadata.db
+sudo rm -f /var/lib/docker/network/files/local-kv.db
+echo "Starting dockerd..."
+sudo dockerd                 # Restart the Docker daemon
+```
 
 
 ```
