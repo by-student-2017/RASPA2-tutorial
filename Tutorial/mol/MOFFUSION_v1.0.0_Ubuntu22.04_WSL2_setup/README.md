@@ -111,7 +111,7 @@ This document outlines the recommended environment for running **MOFFUSION**, fo
 
 ### Overview
 
-MOFFUSION relies heavily on GPU acceleration and specific library versions. While the core dependencies are aligned with **Ubuntu 20.04 LTS**, we recommend using **Ubuntu 22.04 LTS** for host systems due to its extended support and compatibility. (Side note: I tried it on Ubuntu 18.04 LTS and Ubuntu 24.04 LTS, but it didn't work with Docker or GPU settings. It's difficult unless you're an expert in this field.)
+MOFFUSION relies heavily on GPU acceleration and specific library versions. While the core dependencies are aligned with **Ubuntu 20.04 LTS**, we recommend using **Ubuntu 22.04 LTS** for host systems due to its extended support and compatibility. (Side note: I tried it on Ubuntu 18.04 LTS, but it didn't work with Docker or GPU settings. It's difficult unless you're an expert in this field.)
 
 ---
 
