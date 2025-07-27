@@ -3,6 +3,7 @@
 
 
 ## WSL2
+- Run the following in a Windows command prompt with administrator privileges:
 ```
 wsl --help
 wsl -l -o
