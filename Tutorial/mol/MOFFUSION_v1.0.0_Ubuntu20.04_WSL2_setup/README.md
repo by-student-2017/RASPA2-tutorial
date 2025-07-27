@@ -1,7 +1,7 @@
 # NOFFUSION v.1.0.0 setup (Edit: 2025/07/26) 
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 20.04 LTS, WSL2, Windows 11
 
-## WSL1
+## WSL2
 ```
 wsl --help
 wsl -l -o
