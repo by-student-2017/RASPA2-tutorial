@@ -11,6 +11,7 @@ wsl --install Ubuntu-22.04
 
 
 ## Installation
+- From now on, use the Linux shell (which may be selectable by pressing "shift + right click").
 ```
 bash setup_miniconda3.sh
 ```
