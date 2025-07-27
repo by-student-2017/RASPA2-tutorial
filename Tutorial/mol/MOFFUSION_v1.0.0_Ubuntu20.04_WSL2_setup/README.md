@@ -69,7 +69,6 @@ pip install transformers==4.22.2
 ```
 
 
-- Note: In another terminal run:
 ```
 bash install_pytorch_cuda113.sh
 bash install_moffusion_v1.sh
