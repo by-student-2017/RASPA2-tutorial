@@ -50,8 +50,6 @@ pip install opencv-python==4.9.0.80
 pip install "huggingface-hub>=0.16.4,<1.0.0"
 pip install tokenizers==0.21.2
 pip install transformers==4.22.2
-pip install chgnet==0.3.5
-pip install pormake==0.2.2
 pip install ffmpeg-python
 sudo apt install libopenh264-6
 sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.6 /usr/lib/x86_64-linux-gnu/libopenh264.so.5
