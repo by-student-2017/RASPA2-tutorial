@@ -152,7 +152,7 @@ MOFFUSION relies heavily on GPU acceleration and specific library versions. Whil
 
 ---
 
-#### GPU Support
+### GPU Support
 
 To enable GPU acceleration inside Docker containers:
 
