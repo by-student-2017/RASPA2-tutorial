@@ -1,7 +1,7 @@
 # MOFFUSION v.1.0.0 setup (Edit: 2025/07/27) 
 ## Docker Engine (free version), GPU: RTX 3070, OS: Ubuntu 22.04 LTS, WSL2, Windows 11
 
-## WSL2
+## WSL2 (on command prompt)
 - Run the following in a Windows command prompt with administrator privileges:
 ```
 wsl --help
@@ -10,7 +10,7 @@ wsl --install Ubuntu-22.04
 ```
 
 
-## Installation
+## Installation (on Linux shell)
 - From now on, use the Linux shell (which may be selectable by pressing "shift + right click").
 ```
 bash setup_miniconda3.sh
@@ -87,7 +87,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 - This site was created using WSL2, so if you have any problems with line breaks, please use the command dos2unix.
 
 
-## After that (after the second time or after restarting the PC, etc.)
+## After that (after the second time or after restarting the PC, etc.) (on Linux shell)
 ```
 conda activate moffusion
 cd MOFFUSION
