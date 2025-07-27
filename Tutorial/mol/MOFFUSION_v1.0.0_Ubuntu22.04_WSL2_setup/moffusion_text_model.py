@@ -43,6 +43,15 @@ from utils.distributed import reduce_loss_dict
 # rendering
 from utils.util_3d import init_mesh_renderer, render_sdf
 
+# Initialize the SciBERT model and tokenizer
+from transformers import AutoTokenizer, AutoModel
+
+def create_scibert():
+    model_name = "allenai/scibert_scivocab_uncased"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModel.from_pretrained(model_name)
+    return model, tokenizer
+
 class MOFFUSIONTextModel(BaseModel):
     def name(self):
         return 'MOFFUSION-Text-Model'
