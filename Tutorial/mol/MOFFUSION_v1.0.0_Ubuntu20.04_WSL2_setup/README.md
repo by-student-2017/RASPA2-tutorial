@@ -55,6 +55,7 @@ sudo dockerd                 # Restart the Docker daemon
 
 
 - Create the one for moffusion with conda create
+- Note: In another terminal run:
 ```
 conda create -n moffusion python=3.9.18 -y
 conda activate moffusion
