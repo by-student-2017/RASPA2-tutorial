@@ -16,10 +16,10 @@ ToBaCCo（Topological Building Block Construction）: https://github.com/tobacco
 # VQ-VAE（Vector Quantized VAE）
 MOFFUSION: https://github.com/parkjunkil/MOFFUSION
 
-# SMVAE
+# VAE (Variational Autoencoder)
 SMVAE: https://github.com/ZovanZhou/SMVAE
 
-# MOFDiff
+# MOFDiff (Diffusion Model)
 MOFDiff: https://github.com/microsoft/MOFDiff
 
 https://pypi.org/project/pycofbuilder/
