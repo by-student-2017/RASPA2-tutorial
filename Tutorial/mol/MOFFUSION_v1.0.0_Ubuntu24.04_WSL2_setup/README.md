@@ -99,6 +99,32 @@ cd MOFFUSION
 jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 
+
+MOFFUSION is a multi-modal conditional diffusion model designed for the generation of metal-organic frameworks (MOFs). It introduces **Signed Distance Functions (SDFs)** as a novel input representation for porous materials, enabling precise control over pore geometry and supporting diverse conditional inputs including numeric, categorical, and textual data.
+
+This model addresses long-standing challenges in MOF design, such as:
+- Limited flexibility in targeting multiple properties simultaneously
+- Structural complexity of MOFs that hindered previous generative approaches
+- Scalability issues in high-throughput screening (HTS)
+
+MOFFUSION demonstrates **exceptional generation performance** in terms of structure validity and property alignment, outperforming baseline models like VAEs and GANs[1](https://www.nature.com/articles/s41467-024-55390-9.pdf).
+
+---
+
+### Notebook Descriptions (Ordered by Likely Usage)
+
+| Notebook Name              | Description |
+|---------------------------|-------------|
+| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. Enables intuitive design via a Transformer-based encoder. Output: `./samples/Demo_text`. |
+| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on specified topologies (e.g., crystal nets). Useful for designing frameworks with known structural motifs. Output: `./samples/Demo_topo`. |
+| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for hydrogen uptake. Ideal for energy storage applications. Output: `./samples/Demo_H2`. |
+| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using SDFs. Suitable for gas separation, catalysis, and drug delivery. Output: `./samples/Demo_pore_crafting`. |
+| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOFs without any input condition. Useful for exploratory design and discovering novel structures. Output: `./samples/Demo_uncond`. |
+
+---
+
+
+
 ---
 
 ## MOFFUSION Jupyter Notebooks Overview
