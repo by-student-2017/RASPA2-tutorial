@@ -197,8 +197,8 @@ Although some documentation may suggest using a `conda` environment for MOFFUSIO
 - **libcuda.so.5 Errors**  
   Conda environments may not correctly link to the system's GPU drivers, resulting in missing or incompatible `libcuda.so.X` libraries. This causes crashes or prevents GPU usage entirely.
 
-- **ffmpeg and libopenh264 Compatibility**
-  On "Ubuntu 22.04+", `ffmpeg` may fail due to missing `libopenh264.so.5`. Conda does not manage system-level libraries well, making manual fixes necessary and error-prone.
+- **ffmpeg and libopenh264 Compatibility**  
+  On Ubuntu 22.04+, `ffmpeg` may fail due to missing `libopenh264.so.5`. Conda does not manage system-level libraries well, making manual fixes necessary and error-prone.
 
 ### Recommendation
 
