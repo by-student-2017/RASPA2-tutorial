@@ -27,7 +27,6 @@ echo 'export PATH=$MAMBA_ROOT_PREFIX/bin:$PATH' >> ~/.bashrc
 
 export MAMBA_ROOT_PREFIX=$HOME/micromamba
 export PATH=$MAMBA_ROOT_PREFIX/bin:$PATH
-eval "$(micromamba shell hook --shell bash)"
 
 # Apply shell changes for current session
 eval "$(micromamba shell hook --shell bash)"
