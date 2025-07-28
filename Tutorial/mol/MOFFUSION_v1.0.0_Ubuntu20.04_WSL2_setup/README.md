@@ -107,10 +107,10 @@ MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF
 - **Technical Background**: A Transformer-based encoder converts text into a latent condition vector, which guides the diffusion model during generation.
 - **Output**: Saved in `./samples/Demo_text`.
 - **Note**: Studies show that text-based conditions can effectively control properties like porosity and topology.
-- **code**: MOFFUSION.cond_text(ngen=20, prompt="MOF with high surface area")
-  The only things you can control are the text prompt and the number of structures generated.
-prompt: natural language description of desired MOF properties
-ngen: number of structures generated
+- **code**: `MOFFUSION.cond_text(ngen=20, prompt="MOF with high surface area")`  
+The only things you can control are the **text prompt** and the **number of structures generated**.  
+`prompt`: natural language description of desired MOF properties  
+`ngen`: number of structures generated
 
 ---
 
