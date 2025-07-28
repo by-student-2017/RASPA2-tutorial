@@ -96,7 +96,7 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## MOFFUSION Jupyter Notebooks Overview
 
-MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF (Metal-Organic Framework) structure generation. Each notebook corresponds to a specific generation mode and is designed to support various research and design workflows.
+MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF (Metal-Organic Framework) structure generation. Each notebook corresponds to a specific generation mode and is designed to support various research and design workflows (cif and gif files are generated).
 
 ---
 
@@ -172,7 +172,7 @@ Generated `.cif` files may require further optimization before use in simulation
 - Tools: MOPAC, DFTB+
 - Use: Fast electronic structure calculations, charge distribution, energy evaluation
 
-#### Ab Initio Quantum Chemistry
+#### first principles calculation (Band calculations due to periodic boundary conditions)
 - Tools: QE, CP2k, Siesta, Abinit, VASP, etc
 - Use: High-accuracy energy calculations, orbital analysis, charge fitting
 
@@ -203,6 +203,8 @@ Generated `.cif` files may require further optimization before use in simulation
 - [moffusion_topo.pth](https://figshare.com/ndownloader/files/46926004)
 - [moffusion_H2.pth](https://figshare.com/ndownloader/files/46931701)
 - [moffusion_text.pth](https://figshare.com/ndownloader/files/46925995)
+
+---
 
 
 ## MOFFUSION Recommended Environment
