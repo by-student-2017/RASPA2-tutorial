@@ -153,6 +153,7 @@ By combining MOFFUSION with these downstream tools, researchers can build a comp
 
 
 ## saved_ckpt
+- First, create a folder ./saved_ckpt to save the pre-trained weights. Then, download the pre-trained weights from the provided link and save them in the ./saved_ckpt folder.
 - You need to manually download the following *.pth and put it in saved_ckpt. Also, please make sure that saved_ckpt and *.pth are in MOFFUSION. If not, you can manually copy saved_ckpt to MOFFUSION.
 - [vqvae.pth](https://figshare.com/ndownloader/files/46925977)
 - [mof_constructor_topo.pth](https://figshare.com/ndownloader/files/46925971)
