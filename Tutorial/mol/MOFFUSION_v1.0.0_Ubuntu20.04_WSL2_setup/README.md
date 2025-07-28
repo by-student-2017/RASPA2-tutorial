@@ -121,13 +121,10 @@ Each generation task produces the following types of files:
 The generated `.cif` files are raw outputs from the generative model and may not be energetically stable. It is strongly recommended to perform **structure optimization** before using them in simulations or experiments. This can be done using:
 
 - **Force field-based methods** (e.g., UFF, Dreiding) via tools like:
-  - LAMMPS
-  - cif2lammps
+  - LAMMPS (cif2lammps)
 - **Semi-empirical quantum methods**:
-  - MOPAC
-  - [DFTB+](https://www.dftbplus.orgistry**:
-  - Psi4
-  - GAMESS
+  - Semi-empirical: MOPAC or DFTB+
+  - First principles: QE, VASP, Siesta, Abinit, etc
 
 These tools can be used to:
 - Optimize atomic positions and lattice parameters
