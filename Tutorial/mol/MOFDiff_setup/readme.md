@@ -20,6 +20,18 @@ bash setup_micromamba.sh
 
 ```
 micromamba activate mofdiff-env
+sudo apt update && sudo apt install -y build-essential g++ cmake python3-dev
+micromamba install pip wheel setuptools cython pybind11 -c conda-forge -y
+CXX=g++ CXXFLAGS="-std=c++11" pip install pyeqeq==0.0.10
+```
+
+
+- Get deta from zenodo (MOFDiff: Coarse-grained Diffusion for Metal-Organic Framework Design: https://zenodo.org/records/10806179)
+```
+wget https://zenodo.org/records/10806179/files/bb_emb_space.tar.gz?download=1 -O bb_emb_space.tar.gz
+wget https://zenodo.org/records/10806179/files/bw_db.tar.gz?download=1 -O bw_db.tar.gz
+wget https://zenodo.org/records/10806179/files/pretrained.tar.gz?download=1 -O pretrained.tar.gz
+wget https://zenodo.org/records/10806179/files/WC_optimized.tar.gz?download=1 -O WC_optimized.tar.gz
 ```
 
 
