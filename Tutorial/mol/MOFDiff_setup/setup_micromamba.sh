@@ -33,7 +33,7 @@ eval "$(micromamba shell hook --shell bash)"
 eval "$(micromamba shell hook --shell bash)"
 
 # Create environment
-micromamba create -y -n mofdiff-env python=3.9
+micromamba create -y -n mofdiff-env python=3.10
 micromamba clean -a -y
 
 echo "Micromamba installation completed successfully."
