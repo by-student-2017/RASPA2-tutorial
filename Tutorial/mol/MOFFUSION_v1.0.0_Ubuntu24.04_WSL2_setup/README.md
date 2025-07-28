@@ -172,8 +172,8 @@ All files are saved under the `./samples` directory, organized by notebook type.
 Generated `.cif` files may require further optimization before use in simulations or experiments. Recommended workflows include:
 
 #### Classical Force Field Optimization
-- Tools: LAMMPS, [cif2lammps](https://github.com/by-student-2017/cif2lammps)
-- Use: Geometry refinement, partial charge assignment, MD simulation preparation
+- Tools: LAMMPS, (MD simulation preparation: [cif2lammps](https://github.com/by-student-2017/cif2lammps))
+- Use: Geometry refinement, partial charge assignment, Molecular dynamics (MD) simulation, energy evaluation (Although it is inferior to the Semi-Empirical Quantum Methods and first principles calculation, it can discuss the structural stability qualitatively or semi-quantitatively in terms of energy.)
 
 #### Semi-Empirical Quantum Methods
 - Tools: MOPAC, DFTB+
