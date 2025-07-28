@@ -181,7 +181,7 @@ Generated `.cif` files may require further optimization before use in simulation
 
 #### first principles calculation (Band calculations due to periodic boundary conditions)
 - Tools: QE, CP2k, Siesta, Abinit, VASP, etc
-- Use: High-accuracy energy calculations, orbital analysis, charge fitting
+- Use: High-accuracy energy calculations (Structural stability based on formation energy calculations. The probability of existence can also be predicted using the Boltzmann distribution.), orbital analysis, charge fitting
 
 ---
 
