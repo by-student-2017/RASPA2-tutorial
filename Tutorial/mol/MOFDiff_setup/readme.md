@@ -50,7 +50,7 @@ bash install_mofdiff.sh
 ```
 
 
-- (option: Instattion Zeo++ and RASPA2)
+- (option: Install Zeo++ and RASPA2)
 ```
 bash install_zeopp_raspa2.sh
 
