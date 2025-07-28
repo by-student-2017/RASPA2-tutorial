@@ -19,7 +19,7 @@ MOFFUSION: https://github.com/parkjunkil/MOFFUSION
 # VAE (Variational Autoencoder)
 SMVAE: https://github.com/ZovanZhou/SMVAE
 
-# MOFDiff (Diffusion Model)
+# DM (Diffusion Model)
 MOFDiff: https://github.com/microsoft/MOFDiff
 
 https://pypi.org/project/pycofbuilder/
