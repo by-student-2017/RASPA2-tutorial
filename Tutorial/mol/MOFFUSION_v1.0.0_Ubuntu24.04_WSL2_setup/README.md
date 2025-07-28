@@ -105,9 +105,6 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF (Metal-Organic Framework) structure generation. Each notebook corresponds to a specific generation mode and is designed to support various research and design workflows (cif and gif files are generated).
 
-
-MOFFUSION demonstrates **exceptional generation performance** in terms of structure validity and property alignment, outperforming baseline models like VAEs and GANs[1](https://www.nature.com/articles/s41467-024-55390-9.pdf).
-
 ---
 
 ### 1. `demo_text.ipynb`: Conditional Generation on Text
