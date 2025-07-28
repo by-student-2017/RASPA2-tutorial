@@ -93,26 +93,48 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 
 
-## MOFFUSION Jupyter Notebooks Overview
+### Output Location and File Formats
 
-MOFFUSION provides several Jupyter Notebooks for different types of MOF structure generation tasks. Each notebook corresponds to a specific generation mode, allowing users to explore various design strategies.
-
-| Notebook Name              | Description |
-|---------------------------|-------------|
-| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOF structures without any input condition. Useful for exploring novel structures beyond known datasets. |
-| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on a specified topology (e.g., crystal net or framework type). Ideal for designing MOFs with known structural motifs. |
-| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. Enables intuitive design by non-experts. |
-| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for a target hydrogen uptake value. Useful for energy storage applications. |
-| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using Signed Distance Functions (SDF). Suitable for applications in gas separation, catalysis, and drug delivery. |
-
-### Output Location
-
-All generated structures are automatically saved in the `./samples` directory. For example:
+All generated MOF structures are automatically saved in the `./samples` directory. For example:
 - Running `demo_topo.ipynb` will save results in `./samples/Demo_topo`.
 
-### Structure Optimization
+Each generation task produces the following types of files:
 
-Generated structures may require further optimization before use in simulations or experiments. Please apply a structure refinement step using external tools (e.g., force field minimization) as needed.
+- **`.cif` files**: Crystallographic Information Files containing atomic coordinates and lattice parameters. These are the primary output format and can be used for further simulation and analysis.
+- **`.gif` files**: Animated visualizations of the generated MOF structures for quick inspection and presentation.
+
+### Structure Optimization and Downstream Applications
+
+The generated `.cif` files are raw outputs from the generative model and may not be energetically stable. It is strongly recommended to perform **structure optimization** before using them in simulations or experiments. This can be done using:
+
+- **Force field-based methods** (e.g., UFF, Dreiding) via tools like:
+  - LAMMPS
+  - cif2lammps
+- **Semi-empirical quantum methods**:
+  - MOPAC
+  - [DFTB+](https://www.dftbplus.orgistry**:
+  - Psi4
+  - GAMESS
+
+These tools can be used to:
+- Optimize atomic positions and lattice parameters
+- Assign partial charges
+- Evaluate energetic stability
+- Prepare input files for molecular dynamics (MD) or Monte Carlo (MC) simulations
+
+### Gas Adsorption and GCMC Simulations
+
+After optimization, the `.cif` files can be used in **Grand Canonical Monte Carlo (GCMC)** simulations to evaluate gas adsorption properties. Recommended tools include:
+
+- [RASPA](https://github.com/iating gas adsorption in porous materials.
+- LAMMPS: Can be used for GCMC via plugins or hybrid workflows.
+
+These simulations are essential for evaluating:
+- Hydrogen storage capacity
+- Selectivity for gas separation
+- Diffusion behavior in pores
+
+By combining MOFFUSION with these downstream tools, researchers can build a complete pipeline from generative design to physical property evaluation and application-specific screening.
 
 
 ## Note
