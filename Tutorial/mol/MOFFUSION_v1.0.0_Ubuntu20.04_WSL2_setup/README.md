@@ -185,6 +185,27 @@ docker run --gpus all -it \
 
 ---
 
+## Known Issues with Conda-Based Setup
+
+Although some documentation may suggest using a `conda` environment for MOFFUSION, we advise against it due to several compatibility and stability issues observed during testing.
+
+### Common Problems
+
+- **PyTorch3D Installation Failures**  
+  `pytorch3d` requires tightly matched versions of PyTorch and CUDA. Conda often lacks prebuilt wheels for specific combinations (e.g., PyTorch 1.11.0 + CUDA 11.3), leading to build errors or runtime failures.
+
+- **libcuda.so.5 Errors**  
+  Conda environments may not correctly link to the system's GPU drivers, resulting in missing or incompatible `libcuda.so.X` libraries. This causes crashes or prevents GPU usage entirely.
+
+- **ffmpeg and libopenh264 Compatibility**  
+  On Ubuntu 22.04+, `ffmpeg` may fail due to missing `libopenh264.so.5`. Conda does not manage system-level libraries well, making manual fixes necessary and error-prone.
+
+### Recommendation
+
+For GPU-enabled execution and reproducible environments, use the Docker-based setup described above. It allows precise control over CUDA, Python, and library versions, and avoids the pitfalls of conda-based installations.
+
+---
+
 ## Troubleshooting GPU Memory Issues in MOFFUSION Notebooks
 
 When working with MOFFUSION notebooks, especially in environments like WSL2 or with limited GPU memory (e.g., RTX 3070 with 8GB VRAM), you may encounter kernel crashes or memory allocation errors. This guide provides best practices to help mitigate GPU memory issues.
@@ -215,40 +236,6 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
   ```bash
   wsl --shutdown
   ```
-
-
-## Recommended Environment Setup for MOFFUSION
-
-While some documentation may suggest using a `conda` environment for MOFFUSION, we strongly recommend using **Docker** instead. This is due to several compatibility and stability issues encountered when attempting to run MOFFUSION in a `conda`-based setup.
-
-### Why Docker is Preferred
-
-- **GPU Compatibility**: MOFFUSION relies heavily on GPU acceleration. Docker allows precise control over CUDA versions and driver compatibility using NVIDIA Container Toolkit.
-- **Reproducibility**: Docker ensures consistent environments across machines, avoiding issues caused by host-specific configurations.
-- **Dependency Isolation**: Complex dependencies such as `ffmpeg`, `libopenh264`, and `pytorch3d` are easier to manage and isolate in Docker.
-
-### Known Issues with Conda
-
-- `pytorch3d` often fails to install correctly due to missing or incompatible wheels for specific CUDA versions (e.g., CUDA 11.3 or 11.8).
-- `libcuda.so.5` errors may occur due to mismatches between the host GPU driver and the expected runtime libraries in the conda environment.
-- `ffmpeg` and `libopenh264.so.5` compatibility issues are common, especially on Ubuntu 22.04+ when using conda.
-
-### Suggested Docker Configuration
-
-- **Base Image**: `nvidia/cuda:11.3.1-cudnn8-runtime-ubuntu20.04`
-- **Python Version**: 3.9.18
-- **PyTorch Version**: 1.11.0 (compatible with CUDA 11.3)
-- **Additional Setup**:
-  - Install `libopenh264-7` manually and create a symlink to `libopenh264.so.5`
-  - Use a custom `requirements.txt` for MOFFUSION dependencies
-  - Launch Jupyter Notebook with GPU support using:
-    ```bash
-    jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
-    ```
-
-### Conclusion
-
-For stable and reproducible execution of MOFFUSION, especially in GPU-enabled environments, Docker is the recommended approach. Conda may work in limited cases, but it is prone to dependency and compatibility issues that are difficult to resolve.
 
 
 ## Citation
