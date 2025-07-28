@@ -44,6 +44,7 @@ wget https://zenodo.org/records/10806179/files/WC_optimized.tar.gz?download=1 -O
 ```
 
 
+- Installing and Preparing MOFDiff.
 ```
 bash install_mofdiff.sh
 ```
