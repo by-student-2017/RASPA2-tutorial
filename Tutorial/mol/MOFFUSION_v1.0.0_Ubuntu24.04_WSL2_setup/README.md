@@ -177,7 +177,7 @@ Generated `.cif` files may require further optimization before use in simulation
 
 #### Semi-Empirical Quantum Methods
 - Tools: MOPAC, DFTB+
-- Use: Fast electronic structure calculations, charge distribution, energy evaluation
+- Use: Fast electronic structure calculations, charge distribution, energy evaluation (Although it is inferior to the first principles calculation, it can discuss the structural stability qualitatively or semi-quantitatively in terms of energy.)
 
 #### first principles calculation (Band calculations due to periodic boundary conditions)
 - Tools: QE, CP2k, Siesta, Abinit, VASP, etc
