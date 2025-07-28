@@ -127,7 +127,8 @@ MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF
 - **Technical Background**: Numerical input (e.g., desired H₂ capacity) is used as a condition for the diffusion model.
 - **Output**: Saved in `./samples/Demo_H2`.
 - **Note**: MOFFUSION demonstrates high accuracy in generating structures that meet specified hydrogen storage targets.
-
+- **code**: "MOFFUSION.cond(ngen=20, target=0.30)" for The only things you can control are the "target amount of adsorption" and the "number of structures generated." target: amount of adsorption (H2 only) and ngen: number of structures generated
+- **What cannot be controlled**: Precursors, topology, pore size, gas species (CO₂, etc.)
 ---
 
 ### 4. `demo_pore_crafting.ipynb`: Pore Crafting
