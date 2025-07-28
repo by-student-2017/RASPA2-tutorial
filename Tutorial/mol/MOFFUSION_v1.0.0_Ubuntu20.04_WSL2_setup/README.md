@@ -121,10 +121,10 @@ The only things you can control are the **text prompt** and the **number of stru
 - **Technical Background**: The model uses topology information as a condition to guide the generation process.
 - **Output**: Saved in `./samples/Demo_topo`.
 - **Note**: Topology significantly influences MOF properties such as stability and pore architecture.
-- **code**: MOFFUSION.cond_topo(ngen=20, topo="pcu")
-  The only things you can control are the topology name and the number of structures generated.
-topo: name of the desired topology (e.g., "pcu", "dia", "sql")
-ngen: number of structures generated
+- **code**: `MOFFUSION.cond_topo(ngen=20, topo="pcu")`  
+The only things you can control are the **topology name** and the **number of structures generated**.  
+`topo`: name of the desired topology (e.g., `"pcu"`, `"dia"`, `"sql"`)  
+`ngen`: number of structures generated
 
 ---
 
@@ -135,10 +135,10 @@ ngen: number of structures generated
 - **Technical Background**: Numerical input (e.g., desired H₂ capacity) is used as a condition for the diffusion model.
 - **Output**: Saved in `./samples/Demo_H2`.
 - **Note**: MOFFUSION demonstrates high accuracy in generating structures that meet specified hydrogen storage targets.
-- **code**: MOFFUSION.cond(ngen=20, target=0.30)
-  The only things you can control are the target amount of hydrogen adsorption and the number of structures generated.
-target: desired hydrogen uptake (normalized, e.g., 0.30 -> 30 g/L)
-ngen: number of structures generated
+- **code**: `MOFFUSION.cond(ngen=20, target=0.30)`  
+The only things you can control are the **target amount of hydrogen adsorption** and the **number of structures generated**.  
+`target`: desired hydrogen uptake (normalized, e.g., 0.30 → 30 g/L)  
+`ngen`: number of structures generated
 
 ---
 
@@ -149,10 +149,10 @@ ngen: number of structures generated
 - **Technical Background**: Uses Signed Distance Functions (SDF) to precisely control pore morphology during generation.
 - **Output**: Saved in `./samples/Demo_pore_crafting`.
 - **Note**: SDF-based control enables the creation of complex pore structures that are difficult to achieve with traditional models.
-- **code**: MOFFUSION.cond_sdf(ngen=20, sdf_profile="cylindrical pore with 1.5 [nm] diameter")
-  The only things you can control are the SDF-based pore description and the number of structures generated.
-sdf_profile: textual or parametric description of desired pore shape and size
-ngen: number of structures generated
+- **code**: `MOFFUSION.cond_sdf(ngen=20, sdf_profile="cylindrical pore with 1.5 [nm] diameter")`  
+The only things you can control are the **SDF-based pore description** and the **number of structures generated**.  
+`sdf_profile`: textual or parametric description of desired pore shape and size  
+`ngen`: number of structures generated
 
 ---
 
@@ -162,9 +162,9 @@ ngen: number of structures generated
 - **Application**: Useful for exploratory structure generation and discovering novel MOFs beyond existing datasets.
 - **Technical Background**: The model samples directly from the learned latent space of the diffusion model.
 - **Output**: Saved in `./samples/Demo_uncond`.
-- **code**: MOFFUSION.cond_uncond(ngen=20)
-  The only thing you can control is the number of structures generated.
-ngen: number of structures generated
+- **code**: `MOFFUSION.cond_uncond(ngen=20)`  
+The only thing you can control is the **number of structures generated**.  
+`ngen`: number of structures generated
 
 ---
 
