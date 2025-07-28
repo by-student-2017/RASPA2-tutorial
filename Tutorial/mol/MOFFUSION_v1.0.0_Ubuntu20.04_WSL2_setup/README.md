@@ -95,16 +95,16 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## MOFFUSION Jupyter Notebooks Overview
 
-MOFFUSION provides several Jupyter Notebooks for different types of MOF structure generation tasks. Each notebook corresponds to a specific generation mode, allowing users to explore various design strategies.
+
+MOFFUSION includes several Jupyter Notebooks, each designed for a specific type of MOF structure generation. These notebooks demonstrate how to use the model under different conditions and provide a starting point for further exploration and simulation.
 
 | Notebook Name              | Description |
 |---------------------------|-------------|
-| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOF structures without any input condition. Useful for exploring novel structures beyond known datasets. |
-| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on a specified topology (e.g., crystal net or framework type). Ideal for designing MOFs with known structural motifs. |
-| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. Enables intuitive design by non-experts. |
-| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for a target hydrogen uptake value. Useful for energy storage applications. |
-| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using Signed Distance Functions (SDF). Suitable for applications in gas separation, catalysis, and drug delivery. |
-
+| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOF structures without any input condition. Useful for discovering novel structures beyond known datasets. The model samples directly from the learned latent space of the diffusion model. Output is saved in `./samples/Demo_uncond`. |
+| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on a specified topology (e.g., crystal net or framework type). This is ideal for designing MOFs with known structural motifs. Topology is a key determinant of MOF properties such as porosity and stability. Output is saved in `./samples/Demo_topo`. |
+| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. A Transformer-based encoder converts the text into a latent condition vector for the diffusion model. This enables intuitive design even by non-experts. Output is saved in `./samples/Demo_text`. |
+| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for a target hydrogen uptake value. This is particularly useful for energy storage applications. The model uses numerical input as a condition to guide generation. Output is saved in `./samples/Demo_H2`. |
+| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using Signed Distance Functions (SDF). This is suitable for applications in gas separation, catalysis, and drug delivery, where pore geometry is critical. Output is saved in `./samples/Demo_pore_crafting`. |
 
 ### Output Location and File Formats
 
