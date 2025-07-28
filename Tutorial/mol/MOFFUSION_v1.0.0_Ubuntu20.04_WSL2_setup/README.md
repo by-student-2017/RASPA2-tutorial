@@ -92,6 +92,7 @@ cd MOFFUSION
 jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 
+---
 
 ## MOFFUSION Jupyter Notebooks Overview
 
@@ -186,7 +187,6 @@ Generated `.cif` files may require further optimization before use in simulation
   - Diffusion behavior in porous frameworks
 
 ---
-
 
 ## Note
 - Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of "MOFFUSION/models/moffusion_text_model.py".
