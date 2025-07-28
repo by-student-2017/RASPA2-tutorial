@@ -122,9 +122,9 @@ The generated `.cif` files are raw outputs from the generative model and may not
 
 - **Force field-based methods** (e.g., UFF, Dreiding) via tools like:
   - LAMMPS (cif2lammps)
-- **Semi-empirical quantum methods**:
+- **quantum methods**:
   - Semi-empirical: MOPAC or DFTB+
-  - First principles: QE, VASP, Siesta, Abinit, etc
+  - First principles: QE, VASP, CP2k, Siesta, Abinit, etc
 
 These tools can be used to:
 - Optimize atomic positions and lattice parameters
