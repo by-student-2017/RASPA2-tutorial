@@ -114,13 +114,6 @@ All generated structures are automatically saved in the `./samples` directory. F
 
 Generated structures may require further optimization before use in simulations or experiments. Please apply a structure refinement step using external tools (e.g., force field minimization) as needed.
 
-### Optional: Silencing pormake Errors
-
-In some cases, the `pormake` software may print error messages even though the structure generation succeeds. To suppress these messages, run the following command once before using the notebooks:
-
-```python
-serialize()
-
 
 ## Note
 - Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of "MOFFUSION/models/moffusion_text_model.py".
