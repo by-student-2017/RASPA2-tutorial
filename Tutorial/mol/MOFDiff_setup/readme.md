@@ -1,4 +1,4 @@
-# MOFDiff setup (Edit: 2025/07/27) 
+# MOFDiff setup (Edit: 2025/07/28) 
 ## Micromamba, GPU: RTX 3070, OS: Ubuntu 20.04 LTS, WSL2, Windows 11
 
 
