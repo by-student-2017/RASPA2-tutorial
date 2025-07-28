@@ -32,10 +32,14 @@ CXX=g++ CXXFLAGS="-std=c++11" pip install pyeqeq==0.0.10
 
 
 - Get deta from zenodo (MOFDiff: Coarse-grained Diffusion for Metal-Organic Framework Design: https://zenodo.org/records/10806179)
+- If you are only doing inference (MOF generation):
 ```
-wget https://zenodo.org/records/10806179/files/bb_emb_space.tar.gz?download=1 -O bb_emb_space.tar.gz
-wget https://zenodo.org/records/10806179/files/bw_db.tar.gz?download=1 -O bw_db.tar.gz
 wget https://zenodo.org/records/10806179/files/pretrained.tar.gz?download=1 -O pretrained.tar.gz
+wget https://zenodo.org/records/10806179/files/bb_emb_space.tar.gz?download=1 -O bb_emb_space.tar.gz
+```
+- When post-processing such as GCMC evaluation and structural classification is also performed
+```
+wget https://zenodo.org/records/10806179/files/bw_db.tar.gz?download=1 -O bw_db.tar.gz
 wget https://zenodo.org/records/10806179/files/WC_optimized.tar.gz?download=1 -O WC_optimized.tar.gz
 ```
 
