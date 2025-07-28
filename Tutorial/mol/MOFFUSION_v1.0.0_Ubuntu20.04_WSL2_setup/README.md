@@ -217,6 +217,40 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
   ```
 
 
+## Recommended Environment Setup for MOFFUSION
+
+While some documentation may suggest using a `conda` environment for MOFFUSION, we strongly recommend using **Docker** instead. This is due to several compatibility and stability issues encountered when attempting to run MOFFUSION in a `conda`-based setup.
+
+### Why Docker is Preferred
+
+- **GPU Compatibility**: MOFFUSION relies heavily on GPU acceleration. Docker allows precise control over CUDA versions and driver compatibility using NVIDIA Container Toolkit.
+- **Reproducibility**: Docker ensures consistent environments across machines, avoiding issues caused by host-specific configurations.
+- **Dependency Isolation**: Complex dependencies such as `ffmpeg`, `libopenh264`, and `pytorch3d` are easier to manage and isolate in Docker.
+
+### Known Issues with Conda
+
+- `pytorch3d` often fails to install correctly due to missing or incompatible wheels for specific CUDA versions (e.g., CUDA 11.3 or 11.8).
+- `libcuda.so.5` errors may occur due to mismatches between the host GPU driver and the expected runtime libraries in the conda environment.
+- `ffmpeg` and `libopenh264.so.5` compatibility issues are common, especially on Ubuntu 22.04+ when using conda.
+
+### Suggested Docker Configuration
+
+- **Base Image**: `nvidia/cuda:11.3.1-cudnn8-runtime-ubuntu20.04`
+- **Python Version**: 3.9.18
+- **PyTorch Version**: 1.11.0 (compatible with CUDA 11.3)
+- **Additional Setup**:
+  - Install `libopenh264-7` manually and create a symlink to `libopenh264.so.5`
+  - Use a custom `requirements.txt` for MOFFUSION dependencies
+  - Launch Jupyter Notebook with GPU support using:
+    ```bash
+    jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
+    ```
+
+### Conclusion
+
+For stable and reproducible execution of MOFFUSION, especially in GPU-enabled environments, Docker is the recommended approach. Conda may work in limited cases, but it is prone to dependency and compatibility issues that are difficult to resolve.
+
+
 ## Citation
 1. Journal version
 ```
