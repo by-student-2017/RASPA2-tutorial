@@ -93,6 +93,35 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 ```
 
 
+## MOFFUSION Jupyter Notebooks Overview
+
+MOFFUSION provides several Jupyter Notebooks for different types of MOF structure generation tasks. Each notebook corresponds to a specific generation mode, allowing users to explore various design strategies.
+
+| Notebook Name              | Description |
+|---------------------------|-------------|
+| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOF structures without any input condition. Useful for exploring novel structures beyond known datasets. |
+| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on a specified topology (e.g., crystal net or framework type). Ideal for designing MOFs with known structural motifs. |
+| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. Enables intuitive design by non-experts. |
+| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for a target hydrogen uptake value. Useful for energy storage applications. |
+| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using Signed Distance Functions (SDF). Suitable for applications in gas separation, catalysis, and drug delivery. |
+
+### Output Location
+
+All generated structures are automatically saved in the `./samples` directory. For example:
+- Running `demo_topo.ipynb` will save results in `./samples/Demo_topo`.
+
+### Structure Optimization
+
+Generated structures may require further optimization before use in simulations or experiments. Please apply a structure refinement step using external tools (e.g., force field minimization) as needed.
+
+### Optional: Silencing pormake Errors
+
+In some cases, the `pormake` software may print error messages even though the structure generation succeeds. To suppress these messages, run the following command once before using the notebooks:
+
+```python
+serialize()
+
+
 ## Note
 - Modification for demo_text.ipynb: Specified strict=False in the load_ckpt function of "MOFFUSION/models/moffusion_text_model.py".
 - The results of the demos are stored in the "samples" directory in MOFFUSION, named after each demo. Comments on the results are shown in the "jupyter notebook".
