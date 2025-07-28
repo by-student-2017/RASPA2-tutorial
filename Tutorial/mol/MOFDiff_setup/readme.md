@@ -20,6 +20,11 @@ bash setup_micromamba.sh
 
 ```
 micromamba activate mofdiff-env
+```
+
+
+- How to deal with an error that occurs when installing pyeqeq.
+```
 sudo apt update && sudo apt install -y build-essential g++ cmake python3-dev
 micromamba install pip wheel setuptools cython pybind11 -c conda-forge -y
 CXX=g++ CXXFLAGS="-std=c++11" pip install pyeqeq==0.0.10
