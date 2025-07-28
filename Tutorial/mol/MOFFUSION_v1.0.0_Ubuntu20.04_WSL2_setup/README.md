@@ -95,56 +95,97 @@ jupyter notebook --ip=0.0.0.0 --port=8888 --allow-root --no-browser
 
 ## MOFFUSION Jupyter Notebooks Overview
 
+MOFFUSION provides several Jupyter Notebooks tailored for different types of MOF (Metal-Organic Framework) structure generation. Each notebook corresponds to a specific generation mode and is designed to support various research and design workflows.
 
-MOFFUSION includes several Jupyter Notebooks, each designed for a specific type of MOF structure generation. These notebooks demonstrate how to use the model under different conditions and provide a starting point for further exploration and simulation.
+---
 
-| Notebook Name              | Description |
-|---------------------------|-------------|
-| `demo_uncond.ipynb`       | **Unconditional Generation**: Generates MOF structures without any input condition. Useful for discovering novel structures beyond known datasets. The model samples directly from the learned latent space of the diffusion model. Output is saved in `./samples/Demo_uncond`. |
-| `demo_topo.ipynb`         | **Conditional Generation on Topology**: Generates MOFs based on a specified topology (e.g., crystal net or framework type). This is ideal for designing MOFs with known structural motifs. Topology is a key determinant of MOF properties such as porosity and stability. Output is saved in `./samples/Demo_topo`. |
-| `demo_text.ipynb`         | **Conditional Generation on Text**: Uses natural language prompts (e.g., "high surface area MOF") to guide the generation. A Transformer-based encoder converts the text into a latent condition vector for the diffusion model. This enables intuitive design even by non-experts. Output is saved in `./samples/Demo_text`. |
-| `demo_H2.ipynb`           | **Conditional Generation on Hydrogen Working Capacity**: Generates MOFs optimized for a target hydrogen uptake value. This is particularly useful for energy storage applications. The model uses numerical input as a condition to guide generation. Output is saved in `./samples/Demo_H2`. |
-| `demo_pore_crafting.ipynb`| **Pore Crafting**: Allows precise control over pore shape and size using Signed Distance Functions (SDF). This is suitable for applications in gas separation, catalysis, and drug delivery, where pore geometry is critical. Output is saved in `./samples/Demo_pore_crafting`. |
+### 1. `demo_text.ipynb`: Conditional Generation on Text
 
-### Output Location and File Formats
+- **Purpose**: Generates MOF structures based on natural language descriptions (e.g., "MOF with high surface area").
+- **Application**: Enables intuitive design using textual prompts; accessible even to non-experts.
+- **Technical Background**: A Transformer-based encoder converts text into a latent condition vector, which guides the diffusion model during generation.
+- **Output**: Saved in `./samples/Demo_text`.
+- **Note**: Studies show that text-based conditions can effectively control properties like porosity and topology.
 
-All generated MOF structures are automatically saved in the `./samples` directory. For example:
-- Running `demo_topo.ipynb` will save results in `./samples/Demo_topo`.
+---
 
-Each generation task produces the following types of files:
+### 2. `demo_topo.ipynb`: Conditional Generation on Topology
 
-- **`.cif` files**: Crystallographic Information Files containing atomic coordinates and lattice parameters. These are the primary output format and can be used for further simulation and analysis.
+- **Purpose**: Generates MOFs based on a specified topology (e.g., crystal net or framework type).
+- **Application**: Useful for designing MOFs with known structural motifs and desired connectivity.
+- **Technical Background**: The model uses topology information as a condition to guide the generation process.
+- **Output**: Saved in `./samples/Demo_topo`.
+- **Note**: Topology significantly influences MOF properties such as stability and pore architecture.
+
+---
+
+### 3. `demo_H2.ipynb`: Conditional Generation on Hydrogen Working Capacity
+
+- **Purpose**: Generates MOFs optimized for a target hydrogen uptake value.
+- **Application**: Ideal for designing materials for hydrogen storage and energy applications.
+- **Technical Background**: Numerical input (e.g., desired H₂ capacity) is used as a condition for the diffusion model.
+- **Output**: Saved in `./samples/Demo_H2`.
+- **Note**: MOFFUSION demonstrates high accuracy in generating structures that meet specified hydrogen storage targets.
+
+---
+
+### 4. `demo_pore_crafting.ipynb`: Pore Crafting
+
+- **Purpose**: Generates MOFs with user-defined pore shapes and sizes.
+- **Application**: Suitable for gas separation, catalysis, and drug delivery, where pore geometry is critical.
+- **Technical Background**: Uses Signed Distance Functions (SDF) to precisely control pore morphology during generation.
+- **Output**: Saved in `./samples/Demo_pore_crafting`.
+- **Note**: SDF-based control enables the creation of complex pore structures that are difficult to achieve with traditional models.
+
+---
+
+### 5. `demo_uncond.ipynb`: Unconditional Generation
+
+- **Purpose**: Generates MOF structures without any input condition.
+- **Application**: Useful for exploratory structure generation and discovering novel MOFs beyond existing datasets.
+- **Technical Background**: The model samples directly from the learned latent space of the diffusion model.
+- **Output**: Saved in `./samples/Demo_uncond`.
+
+---
+
+### Output Files and Formats
+
+Each notebook generates the following files:
+
+- **`.cif` files**: Crystallographic Information Files containing atomic coordinates and lattice parameters. These are suitable for downstream simulation and analysis.
 - **`.gif` files**: Animated visualizations of the generated MOF structures for quick inspection and presentation.
 
-### Structure Optimization and Downstream Applications
+All files are saved under the `./samples` directory, organized by notebook type.
 
-The generated `.cif` files are raw outputs from the generative model and may not be energetically stable. It is strongly recommended to perform **structure optimization** before using them in simulations or experiments. This can be done using:
+---
 
-- **Force field-based methods** (e.g., UFF, Dreiding) via tools like:
-  - LAMMPS (cif2lammps)
-- **quantum methods**:
-  - Semi-empirical: MOPAC or DFTB+
-  - First principles: QE, VASP, CP2k, Siesta, Abinit, etc
+### Structure Optimization and Simulation Pipeline
 
-These tools can be used to:
-- Optimize atomic positions and lattice parameters
-- Assign partial charges
-- Evaluate energetic stability
-- Prepare input files for molecular dynamics (MD) or Monte Carlo (MC) simulations
+Generated `.cif` files may require further optimization before use in simulations or experiments. Recommended workflows include:
 
-### Gas Adsorption and GCMC Simulations
+#### Classical Force Field Optimization
+- Tools: LAMMPS, [cif2lammps](https://github.com/by-student-2017/cif2lammps)
+- Use: Geometry refinement, partial charge assignment, MD simulation preparation
 
-After optimization, the `.cif` files can be used in **Grand Canonical Monte Carlo (GCMC)** simulations to evaluate gas adsorption properties. Recommended tools include:
+#### Semi-Empirical Quantum Methods
+- Tools: MOPAC, DFTB+
+- Use: Fast electronic structure calculations, charge distribution, energy evaluation
 
-- [RASPA](https://github.com/iating gas adsorption in porous materials.
-- LAMMPS: Can be used for GCMC via plugins or hybrid workflows.
+#### Ab Initio Quantum Chemistry
+- Tools: QE, CP2k, Siesta, Abinit, VASP, etc
+- Use: High-accuracy energy calculations, orbital analysis, charge fitting
 
-These simulations are essential for evaluating:
-- Hydrogen storage capacity
-- Selectivity for gas separation
-- Diffusion behavior in pores
+---
 
-By combining MOFFUSION with these downstream tools, researchers can build a complete pipeline from generative design to physical property evaluation and application-specific screening.
+### Gas Adsorption `.cif` files can be used in Grand Canonical Monte Carlo (GCMC) simulations to evaluate gas adsorption properties:
+
+- Tools: RASPA, LAMMPS
+- Applications:
+  - Hydrogen storage capacity
+  - Selectivity for gas separation
+  - Diffusion behavior in porous frameworks
+
+---
 
 
 ## Note
