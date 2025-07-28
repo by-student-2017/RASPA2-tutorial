@@ -337,6 +337,7 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
   wsl --shutdown
   ```
 
+---
 
 ## Citation
 1. Journal version
@@ -358,6 +359,7 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 }
 ```
 
+---
 
 ## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
