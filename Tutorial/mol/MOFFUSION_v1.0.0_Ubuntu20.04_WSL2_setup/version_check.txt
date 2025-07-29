@@ -22,23 +22,31 @@ build platform: x86_64
 build flags: -D_GNU_SOURCE -D_FORTIFY_SOURCE=2 -DNDEBUG -std=gnu11 -O2 -g -fdata-sections -ffunction-sections -fplan9-extensions -fstack-protector -fno-strict-aliasing -fvisibility=hidden -Wall -Wextra -Wcast-align -Wpointer-arith -Wmissing-prototypes -Wnonnull -Wwrite-strings -Wlogical-op -Wformat=2 -Wmissing-format-attribute -Winit-self -Wshadow -Wstrict-prototypes -Wunreachable-code -Wconversion -Wsign-conversion -Wno-unknown-warning-option -Wno-format-extra-args -Wno-gnu-alignof-expression -Wl,-zrelro -Wl,-znow -Wl,-zdefs -Wl,--gc-sections
 ii  nvidia-docker2                   2.13.0-1                          all          nvidia-docker CLI wrapper
 
-=== Conda Environment Activation ===
+=== Python Version ===
+Python 3.9.18
+
 
 === PyTorch & CUDA Versions ===
 PyTorch: 1.11.0
 CUDA available: True
 CUDA version: 11.3
 
+
 === torchvision / torchaudio ===
 torchvision: 0.12.0
+
 torchaudio: 0.11.0
+
 
 === fvcore / iopath ===
 fvcore: 0.1.5.post20221221
+
 iopath: 0.1.9
+
 
 === PyTorch3D ===
 pytorch3d: 0.7.4
+
 
 === Python Packages (pip) ===
 einops                    0.8.1
@@ -67,10 +75,4 @@ transformers              4.22.2
 trimesh                   4.7.1
 
 === MOFFUSION Version Info ===
-MOFFUSION directory exists.
-Version: v1.0.0 (from GitHub tag)
-MOFFUSION/README.md:We recommend to build a [`conda`](https://www.anaconda.com/products/distribution) environment. You might need a different version of `cudatoolkit` depending on your GPU driver.
-MOFFUSION/README.md:1. Journal version (To be uploaded)
-MOFFUSION/README.md:2. arxiv version
-MOFFUSION/demo_H2.ipynb:    "version": 3
-MOFFUSION/demo_H2.ipynb:   "version": "3.9.18"
+MOFFUSION directory not found.
