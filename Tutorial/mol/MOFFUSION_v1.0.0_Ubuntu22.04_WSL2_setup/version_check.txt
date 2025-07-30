@@ -42,6 +42,7 @@ pytorch3d: 0.7.4
 
 === Python Packages (pip) ===
 einops                    0.8.1
+ffmpeg-python             0.2.0
 h5py                      3.14.0
 h5py.-debian-h5py-serial  3.6.0
 imageio                   2.37.0
@@ -51,11 +52,13 @@ matplotlib                3.7.1
 matplotlib-inline         0.1.7
 notebook                  7.4.4
 notebook_shim             0.2.4
+numpy                     1.26.4
 omegaconf                 2.3.0
 opencv-python             4.9.0.80
 Pillow                    9.5.0
 pormake                   0.2.2
 py3Dmol                   2.5.1
+pymatgen                  2023.11.12
 PyMCubes                  0.1.6
 scikit-learn              1.7.1
 scipy                     1.15.3
@@ -63,9 +66,17 @@ seaborn                   0.13.2
 tensorboard               2.19.0
 tensorboard-data-server   0.7.2
 termcolor                 3.1.0
+tokenizers                0.12.1
 tqdm                      4.67.1
 transformers              4.22.2
 trimesh                   4.7.0
 
 === MOFFUSION Version Info ===
-MOFFUSION directory not found.
+MOFFUSION directory exists.
+Version: v1.0.0 (from GitHub tag)
+./MOFFUSION/README.md:We recommend to build a [`conda`](https://www.anaconda.com/products/distribution) environment. You might need a different version of `cudatoolkit` depending on your GPU driver.
+./MOFFUSION/README.md:1. Journal version (To be uploaded)
+./MOFFUSION/README.md:2. arxiv version
+./MOFFUSION/demo_H2.ipynb:      "/home/inukai/.local/lib/python3.10/site-packages/pandas/core/computation/expressions.py:21: UserWarning: Pandas requires version '2.8.4' or newer of 'numexpr' (version '2.8.1' currently installed).\n",
+./MOFFUSION/demo_H2.ipynb:      "/home/inukai/.local/lib/python3.10/site-packages/pandas/core/arrays/masked.py:61: UserWarning: Pandas requires version '1.3.6' or newer of 'bottleneck' (version '1.3.2' currently installed).\n",
+
