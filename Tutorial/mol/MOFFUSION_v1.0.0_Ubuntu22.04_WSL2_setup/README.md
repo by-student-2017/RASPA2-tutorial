@@ -385,4 +385,96 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 
 ---
 
+## Appendix: Environment Summary (as of July 2025)
 
+### OS & Kernel Info
+| Item         | Details                                      |
+|--------------|----------------------------------------------|
+| OS           | Ubuntu 22.04.5 LTS                           |
+| Codename     | jammy                                        |
+| Kernel       | 6.6.87.2-microsoft-standard-WSL2             |
+
+### Docker & NVIDIA Container Toolkit
+| Component                 | Version / Build Info                          |
+|---------------------------|-----------------------------------------------|
+| Docker                    | 28.3.2 (build 578ccf6)                        |
+| Docker Compose            | v2.38.2                                       |
+| Buildx                    | v0.25.0 (faaea65)                             |
+| containerd                | 1.7.27 (05044ec0a9a75232...)                  |
+| NVIDIA Container Toolkit  | 1.17.8                                        |
+| nvidia-docker2            | 2.14.0-1                                      |
+
+### Python & Conda
+| Item        | Value       |
+|-------------|-------------|
+| Python      | 3.9.18      |
+| Conda Env   | moffusion   |
+
+### PyTorch & CUDA Versions
+| Library      | Version     |
+|--------------|-------------|
+| PyTorch      | (not detected) |
+| CUDA Toolkit | (not detected) |
+
+### torchvision / torchaudio
+| Library      | Version     |
+|--------------|-------------|
+| torchvision  | (not detected) |
+| torchaudio   | (not detected) |
+
+### fvcore / iopath
+| Library | Version             |
+|---------|---------------------|
+| fvcore  | 0.1.5.post20221221  |
+| iopath  | 0.1.10              |
+
+### PyTorch3D
+| Library    | Version |
+|------------|---------|
+| pytorch3d  | 0.7.4   |
+
+### ffmpeg-python
+| Library        | Version |
+|----------------|---------|
+| ffmpeg-python  | 0.2.0   |
+
+### Python Packages (pip)
+| Package               | Version     |
+|-----------------------|-------------|
+| einops                | 0.8.1       |
+| h5py                  | 3.14.0      |
+| h5py.-debian-h5py-serial | 3.6.0   |
+| imageio               | 2.37.0      |
+| ipywidgets            | 8.1.7       |
+| joblib                | 1.5.1       |
+| matplotlib            | 3.7.1       |
+| matplotlib-inline     | 0.1.7       |
+| notebook              | 7.4.4       |
+| notebook_shim         | 0.2.4       |
+| numpy                 | 1.26.4      |
+| omegaconf             | 2.3.0       |
+| opencv-python         | 4.9.0.80    |
+| Pillow                | 9.5.0       |
+| pormake               | 0.2.2       |
+| py3Dmol               | 2.5.1       |
+| pymatgen              | 2023.11.12  |
+| PyMCubes              | 0.1.6       |
+| scikit-learn          | 1.7.1       |
+| scipy                 | 1.15.3      |
+| seaborn               | 0.13.2      |
+| tensorboard           | 2.19.0      |
+| tensorboard-data-server | 0.7.2    |
+| termcolor             | 3.1.0       |
+| tokenizers            | 0.12.1      |
+| tqdm                  | 4.67.1      |
+| transformers          | 4.22.2      |
+| trimesh               | 4.7.0       |
+
+### MOFFUSION Version Info
+| Item        | Details                                  |
+|-------------|-------------------------------------------|
+| Version     | v1.0.0 (from GitHub tag)                 |
+| README.md   | Mentions journal and arXiv versions      |
+| demo_H2.ipynb | Contains warnings about `numexpr` and `bottleneck` versions in Pandas |
+
+---
