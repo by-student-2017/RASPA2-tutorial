@@ -65,7 +65,7 @@ pip install opencv-python==4.9.0.80
 pip install "huggingface-hub>=0.16.4,<1.0.0"
 pip install tokenizers==0.21.2
 pip install transformers==4.22.2
-pip install ffmpeg-python
+pip install ffmpeg-python==0.2.0
 sudo apt install libopenh264-6
 sudo ln -s /usr/lib/x86_64-linux-gnu/libopenh264.so.6 /usr/lib/x86_64-linux-gnu/libopenh264.so.5
 ```
@@ -382,3 +382,7 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 
 ## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
+
+---
+
+
