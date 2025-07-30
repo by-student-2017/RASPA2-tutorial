@@ -44,10 +44,10 @@ echo "=== Python Packages (pip) ==="
 
 echo ""
 echo "=== MOFFUSION Version Info ==="
-if [ -d /workspace/MOFFUSION ]; then
+if [ -d MOFFUSION ]; then
   echo "MOFFUSION directory exists."
   echo "Version: v1.0.0 (from GitHub tag)"
-  grep -i version /workspace/MOFFUSION/* 2>/dev/null | head -n 5
+  grep -i version ./MOFFUSION/* 2>/dev/null | head -n 5
 else
   echo "MOFFUSION directory not found."
 fi
