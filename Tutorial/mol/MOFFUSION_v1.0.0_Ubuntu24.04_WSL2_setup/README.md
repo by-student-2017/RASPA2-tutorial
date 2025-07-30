@@ -386,3 +386,102 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 
 ## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
+
+---
+
+# System Environment Summary
+
+## OS & Kernel Info
+| Key | Value |
+|-----|-------|
+| Distributor ID | Ubuntu |
+| Description | Ubuntu 24.04.2 LTS |
+| Release | 24.04 |
+| Codename | noble |
+| Kernel | 6.6.87.2-microsoft-standard-WSL2 |
+
+## Docker Versions
+| Key | Value |
+|-----|-------|
+| Docker | Docker version 28.1.1, build 4eba377 |
+| Docker Compose | v2.35.1 |
+| Buildx | v0.23.0 28c90ea |
+| containerd | containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da |
+
+## NVIDIA Container Toolkit Versions
+| Key | Value |
+|-----|-------|
+| CLI Version | 1.13.5 |
+| Library Version | 1.13.5 |
+| Build Date | 2023-07-18T11:38+00:00 |
+| Build Revision | 66607bd046341f7aad7de80a9f022f122d1f2fce |
+| Compiler | x86_64-linux-gnu-gcc-7 7.5.0 |
+| Platform | x86_64 |
+| Flags | -D_GNU_SOURCE -D_FORTIFY_SOURCE=2 -DNDEBUG -std=gnu11 -O2 -g -fdata-sections -ffunction-sections -fplan9-extensions -fstack-protector -fno-strict-aliasing -fvisibility=hidden -Wall -Wextra -Wcast-align -Wpointer-arith -Wmissing-prototypes -Wnonnull -Wwrite-strings -Wlogical-op -Wformat=2 -Wmissing-format-attribute -Winit-self -Wshadow -Wstrict-prototypes -Wunreachable-code -Wconversion -Wsign-conversion -Wno-unknown-warning-option -Wno-format-extra-args -Wno-gnu-alignof-expression -Wl,-zrelro -Wl,-znow -Wl,-zdefs -Wl,--gc-sections |
+| nvidia-docker2 | 2.13.0-1 |
+
+## Python Version
+| Key | Value |
+|-----|-------|
+| Python | 3.9.18 |
+
+## PyTorch & CUDA Versions
+| Key | Value |
+|-----|-------|
+| PyTorch | 1.11.0+cu113 |
+| CUDA available | True |
+| CUDA version | 11.3 |
+
+## torchvision / torchaudio
+| Key | Value |
+|-----|-------|
+| torchvision | 0.12.0+cu113 |
+| torchaudio | 0.11.0+cu113 |
+
+## fvcore / iopath
+| Key | Value |
+|-----|-------|
+| fvcore | 0.1.5.post20221221 |
+| iopath | 0.1.9 |
+
+## PyTorch3D
+| Key | Value |
+|-----|-------|
+| pytorch3d | 0.7.4 |
+
+## Python Packages (pip)
+List of packages:
+- einops 0.8.1
+- h5py 3.14.0
+- imageio 2.37.0
+- ipywidgets 8.1.7
+- joblib 1.5.1
+- matplotlib 3.9.4
+- matplotlib-inline 0.1.7
+- notebook 7.4.4
+- notebook_shim 0.2.4
+- omegaconf 2.3.0
+- opencv-python 4.9.0.80
+- Pillow 9.5.0
+- pormake 0.2.2
+- py3Dmol 2.5.1
+- PyMCubes 0.1.6
+- scikit-learn 1.6.1
+- scipy 1.13.1
+- seaborn 0.13.2
+- tensorboard 2.20.0
+- tensorboard-data-server 0.7.2
+- termcolor 3.1.0
+- tqdm 4.67.1
+- transformers 4.22.2
+- trimesh 4.7.1
+
+## MOFFUSION Version Info
+| Key | Value |
+|-----|-------|
+| Directory | Exists |
+| Version | v1.0.0 (from GitHub tag) |
+| README.md Notes | ['We recommend to build a conda environment. You might need a different version of cudatoolkit depending on your GPU driver.', '1. Journal version (To be uploaded)', '2. arxiv version'] |
+| demo_H2.ipynb | ['version: 3', 'version: 3.9.18'] |
+
+
