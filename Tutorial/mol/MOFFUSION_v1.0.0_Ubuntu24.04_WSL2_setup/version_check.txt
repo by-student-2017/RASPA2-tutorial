@@ -74,4 +74,10 @@ transformers              4.22.2
 trimesh                   4.7.1
 
 === MOFFUSION Version Info ===
-MOFFUSION directory not found.
+MOFFUSION directory exists.
+Version: v1.0.0 (from GitHub tag)
+./MOFFUSION/README.md:We recommend to build a [`conda`](https://www.anaconda.com/products/distribution) environment. You might need a different version of `cudatoolkit` depending on your GPU driver.
+./MOFFUSION/README.md:1. Journal version (To be uploaded)
+./MOFFUSION/README.md:2. arxiv version
+./MOFFUSION/demo_H2.ipynb:    "version": 3
+./MOFFUSION/demo_H2.ipynb:   "version": "3.9.18"
