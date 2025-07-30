@@ -389,9 +389,9 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 
 ---
 
-# Appendix: System Environment Summary
+## Appendix: System Environment Summary
 
-## OS & Kernel Info
+### OS & Kernel Info
 | Key | Value |
 |-----|-------|
 | Distributor ID | Ubuntu |
@@ -400,7 +400,7 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 | Codename | noble |
 | Kernel | 6.6.87.2-microsoft-standard-WSL2 |
 
-## Docker Versions
+### Docker Versions
 | Key | Value |
 |-----|-------|
 | Docker | Docker version 28.1.1, build 4eba377 |
@@ -408,7 +408,7 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 | Buildx | v0.23.0 28c90ea |
 | containerd | containerd.io 1.7.27 05044ec0a9a75232cad458027ca83437aae3f4da |
 
-## NVIDIA Container Toolkit Versions
+### NVIDIA Container Toolkit Versions
 | Key | Value |
 |-----|-------|
 | CLI Version | 1.13.5 |
@@ -420,36 +420,36 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 | Flags | -D_GNU_SOURCE -D_FORTIFY_SOURCE=2 -DNDEBUG -std=gnu11 -O2 -g -fdata-sections -ffunction-sections -fplan9-extensions -fstack-protector -fno-strict-aliasing -fvisibility=hidden -Wall -Wextra -Wcast-align -Wpointer-arith -Wmissing-prototypes -Wnonnull -Wwrite-strings -Wlogical-op -Wformat=2 -Wmissing-format-attribute -Winit-self -Wshadow -Wstrict-prototypes -Wunreachable-code -Wconversion -Wsign-conversion -Wno-unknown-warning-option -Wno-format-extra-args -Wno-gnu-alignof-expression -Wl,-zrelro -Wl,-znow -Wl,-zdefs -Wl,--gc-sections |
 | nvidia-docker2 | 2.13.0-1 |
 
-## Python Version
+### Python Version
 | Key | Value |
 |-----|-------|
 | Python | 3.9.18 |
 
-## PyTorch & CUDA Versions
+### PyTorch & CUDA Versions
 | Key | Value |
 |-----|-------|
 | PyTorch | 1.11.0+cu113 |
 | CUDA available | True |
 | CUDA version | 11.3 |
 
-## torchvision / torchaudio
+### torchvision / torchaudio
 | Key | Value |
 |-----|-------|
 | torchvision | 0.12.0+cu113 |
 | torchaudio | 0.11.0+cu113 |
 
-## fvcore / iopath
+### fvcore / iopath
 | Key | Value |
 |-----|-------|
 | fvcore | 0.1.5.post20221221 |
 | iopath | 0.1.9 |
 
-## PyTorch3D
+### PyTorch3D
 | Key | Value |
 |-----|-------|
 | pytorch3d | 0.7.4 |
 
-## Python Packages (pip)
+### Python Packages (pip)
 List of packages:
 - einops 0.8.1
 - h5py 3.14.0
@@ -476,7 +476,7 @@ List of packages:
 - transformers 4.22.2
 - trimesh 4.7.1
 
-## MOFFUSION Version Info
+### MOFFUSION Version Info
 | Key | Value |
 |-----|-------|
 | Directory | Exists |
