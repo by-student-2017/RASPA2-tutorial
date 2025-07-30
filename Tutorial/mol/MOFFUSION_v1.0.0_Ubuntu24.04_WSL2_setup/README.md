@@ -387,11 +387,9 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 ## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
 
-
-
 ---
 
-# System Environment Summary
+# Appendix: System Environment Summary
 
 ## OS & Kernel Info
 | Key | Value |
