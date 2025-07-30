@@ -380,3 +380,89 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 
 ## License
 - This project is licensed under the MIT License. Please check the LICENSE file for more information.
+
+---
+
+## Appendix: Environment Summary
+
+### OS & Kernel Info
+| Item         | Details                                      |
+|--------------|----------------------------------------------|
+| OS           | Ubuntu 20.04.6 LTS                           |
+| Codename     | focal                                        |
+| Kernel       | 6.6.87.2-microsoft-standard-WSL2             |
+
+### Docker & NVIDIA Container Toolkit
+| Component                 | Version / Build Info                          |
+|---------------------------|-----------------------------------------------|
+| Docker                    | 28.1.1 (build 4eba377)                        |
+| Docker Compose            | v2.35.1                                       |
+| Buildx                    | v0.23.0 (28c90ea)                             |
+| containerd                | 1.7.27 (05044ec0a9a75232...)                  |
+| NVIDIA Container Toolkit  | 1.13.5                                        |
+| nvidia-docker2            | 2.13.0-1                                      |
+
+### Python & Conda
+| Item        | Value       |
+|-------------|-------------|
+| Python      | 3.9.18      |
+| Conda Env   | moffusion   |
+
+### PyTorch & CUDA Versions
+| Library      | Version |
+|--------------|---------|
+| PyTorch      | 1.11.0  |
+| CUDA         | 11.3 (available: True) |
+
+### torchvision / torchaudio
+| Library      | Version |
+|--------------|---------|
+| torchvision  | 0.12.0  |
+| torchaudio   | 0.11.0  |
+
+### fvcore / iopath
+| Library | Version             |
+|---------|---------------------|
+| fvcore  | 0.1.5.post20221221  |
+| iopath  | 0.1.9               |
+
+### PyTorch3D
+| Library    | Version |
+|------------|---------|
+| pytorch3d  | 0.7.4   |
+
+### Python Packages (pip)
+| Package               | Version     |
+|-----------------------|-------------|
+| einops                | 0.8.1       |
+| h5py                  | 3.14.0      |
+| imageio               | 2.37.0      |
+| ipywidgets            | 8.1.7       |
+| joblib                | 1.5.1       |
+| matplotlib            | 3.9.4       |
+| matplotlib-inline     | 0.1.7       |
+| notebook              | 7.4.4       |
+| notebook_shim         | 0.2.4       |
+| omegaconf             | 2.3.0       |
+| opencv-python         | 4.9.0.80    |
+| Pillow                | 9.5.0       |
+| pormake               | 0.2.2       |
+| py3Dmol               | 2.5.1       |
+| PyMCubes              | 0.1.6       |
+| scikit-learn          | 1.6.1       |
+| scipy                 | 1.13.1      |
+| seaborn               | 0.13.2      |
+| tensorboard           | 2.20.0      |
+| tensorboard-data-server | 0.7.2    |
+| termcolor             | 3.1.0       |
+| tqdm                  | 4.67.1      |
+| transformers          | 4.22.2      |
+| trimesh               | 4.7.1       |
+
+### MOFFUSION Version Info
+| Item        | Details                                  |
+|-------------|-------------------------------------------|
+| Version     | v1.0.0 (from GitHub tag)                 |
+| README.md   | Mentions journal and arXiv versions      |
+| demo_H2.ipynb | Contains warnings about `numexpr` and `bottleneck` versions in Pandas |
+
