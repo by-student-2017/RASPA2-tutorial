@@ -450,31 +450,35 @@ When working with MOFFUSION notebooks, especially in environments like WSL2 or w
 | pytorch3d | 0.7.4 |
 
 ### Python Packages (pip)
-List of packages:
-- einops 0.8.1
-- h5py 3.14.0
-- imageio 2.37.0
-- ipywidgets 8.1.7
-- joblib 1.5.1
-- matplotlib 3.9.4
-- matplotlib-inline 0.1.7
-- notebook 7.4.4
-- notebook_shim 0.2.4
-- omegaconf 2.3.0
-- opencv-python 4.9.0.80
-- Pillow 9.5.0
-- pormake 0.2.2
-- py3Dmol 2.5.1
-- PyMCubes 0.1.6
-- scikit-learn 1.6.1
-- scipy 1.13.1
-- seaborn 0.13.2
-- tensorboard 2.20.0
-- tensorboard-data-server 0.7.2
-- termcolor 3.1.0
-- tqdm 4.67.1
-- transformers 4.22.2
-- trimesh 4.7.1
+| Package               | Version     |
+|-----------------------|-------------|
+| einops                | 0.8.1       |
+| h5py                  | 3.14.0      |
+| imageio               | 2.37.0      |
+| ipywidgets            | 8.1.7       |
+| joblib                | 1.5.1       |
+| matplotlib            | 3.9.4       |
+| matplotlib-inline     | 0.1.7       |
+| notebook              | 7.4.4       |
+| notebook_shim         | 0.2.4       |
+| numpy                 | 1.26.4      |
+| omegaconf             | 2.3.0       |
+| opencv-python         | 4.9.0.80    |
+| Pillow                | 9.5.0       |
+| pormake               | 0.2.2       |
+| py3Dmol               | 2.5.1       |
+| pymatgen              | 2023.11.12  |
+| PyMCubes              | 0.1.6       |
+| scikit-learn          | 1.6.1       |
+| scipy                 | 1.13.1      |
+| seaborn               | 0.13.2      |
+| tensorboard           | 2.20.0      |
+| tensorboard-data-server | 0.7.2    |
+| termcolor             | 3.1.0       |
+| tqdm                  | 4.67.1      |
+| transformers          | 4.22.2      |
+| trimesh               | 4.7.1       |
+
 
 ### MOFFUSION Version Info
 | Key | Value |
